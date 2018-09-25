@@ -2,16 +2,14 @@
   "app-id": "com.syntevo.SmartGit",
   "command": "smartgit",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "1.6",
+  "runtime-version": "18.08",
   "separate-locales": false,
   "sdk": "org.freedesktop.Sdk",
-  "sdk-extensions": [
-    "org.freedesktop.Sdk.Extension.openjdk10"
-  ],
   "finish-args": [
     "--device=dri",
-    "--env=SMARTGIT_JAVA_HOME=/app/jre/",
-    "--filesystem=host",
+    "--env=SMARTGIT_JAVA_HOME=/app/extra/smartgit/jre/",
+    "--filesystem=home",
+    "--filesystem=host:ro",
     "--share=ipc",
     "--share=network",
     "--socket=ssh-auth",
@@ -27,15 +25,10 @@
       "sources": [
         {
           "type": "archive",
-          "sha256": "8b40be383a603147ae29337136c00d1c634bdfdc169a30924a024596a7e30e92",
-          "url": "https://www.kernel.org/pub/software/scm/git/git-2.18.0.tar.xz"
+          "sha256": "180feff58fc0d965d23ea010aa2c69ead92ec318eb9b09cf737529aec62f3ef4",
+          "url": "https://www.kernel.org/pub/software/scm/git/git-2.19.0.tar.xz"
         }
       ]
-    },
-    {
-      "name": "openjdk",
-      "buildsystem": "simple",
-      "build-commands": ["/usr/lib/sdk/openjdk10/install.sh"]
     },
     {
       "name": "smartgit",
@@ -56,9 +49,9 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "95912b0264be6be4557cc046156db65e495046fff2076bb143b89f573473fea1",
-          "size": 68044229,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_1_4.tar.gz"
+          "sha256": "e3358528ef90ae56ce930034e7304d96ce18295f1a55d3813d76cb54c4904a38",
+          "size": 68046602,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_1_5.tar.gz"
         },
         {
           "type": "file",
@@ -91,8 +84,7 @@
         {
           "type": "script",
           "commands": [
-            "tar -xzf smartgit.tar.gz",
-            "rm -Rf smartgit.tar.gz smartgit/jre/"
+            "tar -xzf smartgit.tar.gz"
           ],
           "dest-filename": "apply_extra"
         },

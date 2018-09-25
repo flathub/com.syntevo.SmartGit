@@ -20,12 +20,9 @@ $ ./clean-build.sh
 // 1. Update AppData's `<release />`
 // 2. "smartgit" module: extra-data's url, size, and sha256
 // 3. "git" module
-// 4. "openjdk" module
-// 5. Other "sane" checks: runtime/sdk
+// 4. Other "sane" checks: runtime/sdk
 
 == Roadmap
+:uri-issues-tracker: https://github.com/flathub/com.syntevo.SmartGit/issues/
 
-* Update to `Freedesktop 18.08` – `org.freedesktop.Sdk.Extension.openjdk10` must be updated also
-* Disable automatic updates check
-* Fix GPG/SSH access
-* Try to delete `org.freedesktop.Sdk.Extension.openjdk10` when Syntevo upgrades the "shipped" JRE
+See the {uri-issues-tracker}[issues^] tracker.

@@ -2,16 +2,14 @@
   "app-id": "com.syntevo.SmartGit",
   "command": "smartgit",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "1.6",
+  "runtime-version": "18.08",
   "separate-locales": false,
   "sdk": "org.freedesktop.Sdk",
-  "sdk-extensions": [
-    "org.freedesktop.Sdk.Extension.openjdk10"
-  ],
   "finish-args": [
     "--device=dri",
-    "--env=SMARTGIT_JAVA_HOME=/app/jre/",
-    "--filesystem=host",
+    "--env=SMARTGIT_JAVA_HOME=/app/extra/smartgit/jre/",
+    "--filesystem=home",
+    "--filesystem=host:ro",
     "--share=ipc",
     "--share=network",
     "--socket=ssh-auth",
@@ -31,11 +29,6 @@
           "url": "https://www.kernel.org/pub/software/scm/git/git-2.19.0.tar.xz"
         }
       ]
-    },
-    {
-      "name": "openjdk",
-      "buildsystem": "simple",
-      "build-commands": ["/usr/lib/sdk/openjdk10/install.sh"]
     },
     {
       "name": "smartgit",
@@ -91,8 +84,7 @@
         {
           "type": "script",
           "commands": [
-            "tar -xzf smartgit.tar.gz",
-            "rm -Rf smartgit.tar.gz smartgit/jre/"
+            "tar -xzf smartgit.tar.gz"
           ],
           "dest-filename": "apply_extra"
         },

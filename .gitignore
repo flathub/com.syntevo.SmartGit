@@ -6,6 +6,7 @@ build-dir/
 repo/
 
 .DS_Store
+.flatpak-data
 Thumbs.db
 *.iml
 *.sh

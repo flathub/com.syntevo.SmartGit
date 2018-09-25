@@ -1,0 +1,31 @@
+= syntevo SmartGit
+:uri-smartgit-home: https://www.syntevo.com/smartgit/
+
+{uri-smartgit-home}[SmartGit^] is a graphical Git and Mercurial client which can also connect to SVN repositories.
+SmartGit runs on Linux, Mac OS X (10.11 or newer) and Windows (7 or newer) with the same intuitive user interface.
+
+== Build, Install and Run Flatpak
+:uri-flatpak-build-tools: https://gitlab.com/vadimvera/flatpak-build-tools/tree/master/auto-flatpak/
+
+Browse over {uri-flatpak-build-tools}[this^] repository. Download all the files and copy them into this repository.
+
+Modify `.flatpak-data` to match this repository's data, then execute:
+
+[source,shell]
+----
+$ ./preconditions.sh
+$ ./clean-build.sh
+----
+
+// 1. Update AppData's `<release />`
+// 2. "smartgit" module: extra-data's url, size, and sha256
+// 3. "git" module
+// 4. "openjdk" module
+// 5. Other "sane" checks: runtime/sdk
+
+== Roadmap
+
+* Update to `Freedesktop 18.08` – `org.freedesktop.Sdk.Extension.openjdk10` must be updated also
+* Disable automatic updates check
+* Fix GPG/SSH access
+* Try to delete `org.freedesktop.Sdk.Extension.openjdk10` when Syntevo upgrades the "shipped" JRE

@@ -1,19 +1,15 @@
 {
   "app-id": "com.syntevo.SmartGit",
   "command": "smartgit",
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "18.08",
+  "runtime": "org.gnome.Platform",
+  "runtime-version": "3.28",
   "separate-locales": false,
-  "sdk": "org.freedesktop.Sdk",
+  "sdk": "org.gnome.Sdk",
   "finish-args": [
     "--device=dri",
     "--env=SMARTGIT_JAVA_HOME=/app/extra/smartgit/jre/",
     "--filesystem=home",
     "--filesystem=host:ro",
-    "--filesystem=home/.gnupg",
-    "--filesystem=home/.ssh:ro",
-    "--filesystem=xdg-run/gnupg",
-    "--filesystem=xdg-run/ssh",
     "--share=ipc",
     "--share=network",
     "--socket=session-bus",
@@ -24,23 +20,24 @@
   ],
   "modules": [
     {
-      "name": "openssh",
-      "config-opts": ["--without-pie"],
+      "name": "git",
+      "make-args": ["NO_PERL=1"],
+      "make-install-args": ["NO_PERL=1"],
       "sources": [
         {
           "type": "archive",
-          "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.6p1.tar.gz",
-          "sha256": "a323caeeddfe145baaa0db16e98d784b1fbc7dd436a6bf1f479dfd5cd1d21723"
+          "sha256": "180feff58fc0d965d23ea010aa2c69ead92ec318eb9b09cf737529aec62f3ef4",
+          "url": "https://www.kernel.org/pub/software/scm/git/git-2.19.0.tar.xz"
         }
       ]
     },
     {
-      "name": "gpgme",
+      "name": "gnupg",
       "sources": [
         {
           "type": "archive",
-          "sha256": "2d1b111774d2e3dd26dcd7c251819ce4ef774ec5e566251eb9308fa7542fbd6f",
-          "url": "https://www.gnupg.org/ftp/gcrypt/gpgme/gpgme-1.11.1.tar.bz2"
+          "sha256": "799dd37a86a1448732e339bd20440f4f5ee6e69755f6fd7a73ee8af30840c915",
+          "url": "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.10.tar.bz2"
         }
       ],
       "modules": [
@@ -65,19 +62,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "name": "gnupg",
-      "sources": [
-        {
-          "type": "archive",
-          "sha256": "799dd37a86a1448732e339bd20440f4f5ee6e69755f6fd7a73ee8af30840c915",
-          "url": "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.10.tar.bz2"
-        }
-      ],
-      "modules": [
+        },
         {
           "name": "libgcrypt",
           "sources": [
@@ -182,13 +167,17 @@
         {
           "type": "script",
           "commands": [
-            "tar -xzf smartgit.tar.gz"
+            "tar -xzf smartgit.tar.gz",
+            "rm -f smartgit.tar.gz"
           ],
           "dest-filename": "apply_extra"
         },
         {
           "type": "script",
-          "commands": ["exec env /app/extra/smartgit/bin/smartgit.sh \"$@\""],
+          "commands": [
+            "/app/bin/gpg-agent --daemon --pinentry-program /app/bin/pinentry-gnome3",
+            "exec env /app/extra/smartgit/bin/smartgit.sh \"$@\""
+          ],
           "dest-filename": "smartgit.sh"
         }
       ]

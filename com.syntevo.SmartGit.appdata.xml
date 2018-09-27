@@ -39,7 +39,8 @@
   <developer_name>syntevo GmbH</developer_name>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="18.1.5" date="2018-09-25" type="stable" />
-    <release version="18.1.4" date="2018-07-19" type="stable" />
+    <release type="stable" date="2018-11-30" version="18.2.0" />
+    <release type="stable" date="2018-09-25" version="18.1.5" />
+    <release type="stable" date="2018-07-19" version="18.1.4" />
   </releases>
 </component>

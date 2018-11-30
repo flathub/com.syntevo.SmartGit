@@ -1,10 +1,10 @@
 [Desktop Entry]
 Categories=Development;RevisionControl;
-Comment=Git-Client
-Encoding=UTF-8
 Exec=smartgit
+GenericName=Git Client
 Icon=com.syntevo.SmartGit
 Keywords=git;
+MimeType=x-scheme-handler/git;x-scheme-handler/smartgit;x-scheme-handler/sourcetree;
 Name=SmartGit
 Terminal=false
 Type=Application

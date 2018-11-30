@@ -2,14 +2,11 @@
 # Excludes
 .flatpak-builder/
 .idea/
-build-dir/
-repo/
+build/
 
 .DS_Store
-.flatpak-data
 Thumbs.db
 *.iml
-*.sh
 
 
 # Includes

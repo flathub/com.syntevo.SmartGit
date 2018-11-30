@@ -8,8 +8,7 @@
   "finish-args": [
     "--device=dri",
     "--env=SMARTGIT_JAVA_HOME=/app/extra/smartgit/jre/",
-    "--filesystem=home",
-    "--filesystem=host:ro",
+    "--filesystem=host",
     "--share=ipc",
     "--share=network",
     "--socket=ssh-auth",
@@ -20,13 +19,37 @@
   "modules": [
     {
       "name": "git",
-      "make-args": ["NO_PERL=1"],
-      "make-install-args": ["NO_PERL=1"],
+      "make-args": [
+        "NO_PERL=YesPlease",
+        "NO_TCLTK=YesPlease"
+      ],
+      "make-install-args": [
+        "NO_PERL=YesPlease",
+        "NO_TCLTK=YesPlease"
+      ],
+      "post-install": [
+        "find . -type f -name perllocal.pod -delete"
+      ],
       "sources": [
         {
           "type": "archive",
-          "sha256": "180feff58fc0d965d23ea010aa2c69ead92ec318eb9b09cf737529aec62f3ef4",
-          "url": "https://www.kernel.org/pub/software/scm/git/git-2.19.0.tar.xz"
+          "sha256": "fce9a3a3297db5f3756c4553a2fc1fec209ee08178f8491e76ff4ff8fe7b8be9",
+          "url": "https://kernel.org/pub/software/scm/git/git-2.19.2.tar.xz"
+        }
+      ]
+    },
+    {
+      "name": "git-lfs",
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -Dm0755 git-lfs /app/libexec/git-core/"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "sha256": "43e9311bdded82d43c574b075aafaf56681a3450c1ccf59cce9d362acabf1362",
+          "strip-components": 0,
+          "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.6.0/git-lfs-linux-amd64-v2.6.0.tar.gz"
         }
       ]
     },
@@ -34,14 +57,10 @@
       "name": "smartgit",
       "buildsystem": "simple",
       "build-commands": [
-        "install -Dm0755 apply_extra /app/bin/apply_extra",
+        "install -Dm0755 -t /app/bin/ apply_extra",
         "install -Dm0755 smartgit.sh /app/bin/smartgit",
-        "install -Dm0644 smartgit-32.png /app/share/icons/hicolor/32x32/apps/com.syntevo.SmartGit.png",
-        "install -Dm0644 smartgit-48.png /app/share/icons/hicolor/48x48/apps/com.syntevo.SmartGit.png",
-        "install -Dm0644 smartgit-64.png /app/share/icons/hicolor/64x64/apps/com.syntevo.SmartGit.png",
-        "install -Dm0644 smartgit-128.png /app/share/icons/hicolor/128x128/apps/com.syntevo.SmartGit.png",
-        "install -Dm0644 smartgit-256.png /app/share/icons/hicolor/256x256/apps/com.syntevo.SmartGit.png",
-        "install -Dm0644 -t /app/share/appdata/ com.syntevo.SmartGit.appdata.xml",
+        "install -Dm0644 -t /app/share/icons/hicolor/scalable/apps/ com.syntevo.SmartGit.svg",
+        "install -Dm0644 -t /app/share/metainfo/ com.syntevo.SmartGit.appdata.xml",
         "install -Dm0644 -t /app/share/applications/ com.syntevo.SmartGit.desktop"
       ],
       "sources": [
@@ -49,9 +68,9 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "e3358528ef90ae56ce930034e7304d96ce18295f1a55d3813d76cb54c4904a38",
-          "size": 68046602,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_1_5.tar.gz"
+          "sha256": "d39c2ddba5933209b22b83e97bc9202364e3aa0300e2626d00ace33686a000a4",
+          "size": 40515606,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_0.tar.gz"
         },
         {
           "type": "file",
@@ -63,34 +82,21 @@
         },
         {
           "type": "file",
-          "path": "smartgit-32.png"
-        },
-        {
-          "type": "file",
-          "path": "smartgit-48.png"
-        },
-        {
-          "type": "file",
-          "path": "smartgit-64.png"
-        },
-        {
-          "type": "file",
-          "path": "smartgit-128.png"
-        },
-        {
-          "type": "file",
-          "path": "smartgit-256.png"
+          "path": "com.syntevo.SmartGit.svg"
         },
         {
           "type": "script",
           "commands": [
-            "tar -xzf smartgit.tar.gz"
+            "tar -zxf smartgit.tar.gz",
+            "rm -f smartgit.tar.gz"
           ],
           "dest-filename": "apply_extra"
         },
         {
           "type": "script",
-          "commands": ["exec env /app/extra/smartgit/bin/smartgit.sh \"$@\""],
+          "commands": [
+            "exec /app/extra/smartgit/bin/smartgit.sh \"$@\""
+          ],
           "dest-filename": "smartgit.sh"
         }
       ]

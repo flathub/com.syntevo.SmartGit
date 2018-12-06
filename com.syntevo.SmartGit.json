@@ -59,18 +59,18 @@
       "build-commands": [
         "install -Dm0755 -t /app/bin/ apply_extra",
         "install -Dm0755 smartgit.sh /app/bin/smartgit",
+        "install -Dm0644 -t /app/share/applications/ com.syntevo.SmartGit.desktop",
         "install -Dm0644 -t /app/share/icons/hicolor/scalable/apps/ com.syntevo.SmartGit.svg",
-        "install -Dm0644 -t /app/share/metainfo/ com.syntevo.SmartGit.appdata.xml",
-        "install -Dm0644 -t /app/share/applications/ com.syntevo.SmartGit.desktop"
+        "install -Dm0644 -t /app/share/metainfo/ com.syntevo.SmartGit.appdata.xml"
       ],
       "sources": [
         {
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "d39c2ddba5933209b22b83e97bc9202364e3aa0300e2626d00ace33686a000a4",
-          "size": 40515606,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_0.tar.gz"
+          "sha256": "440a670ed80cbed2d1249bd8a9bb340e39fb148629214bb00cd85332aa878fc2",
+          "size": 45005243,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_1.tar.gz"
         },
         {
           "type": "file",

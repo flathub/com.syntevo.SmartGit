@@ -12,12 +12,16 @@ Assuming `flatpak` and `flatpak-builder` are installed, follow the next steps:
 ----
 $ git clone https://github.com/flathub/com.syntevo.SmartGit.git
 $ cd com.syntevo.SmartGit/
+$ flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
 $ flatpak-builder build --force-clean --install-deps-from=flathub --install --user com.syntevo.SmartGit.json
 
-# ...and to clean-up everything
+# ...to uninstall the artifact
 $ flatpak uninstall --delete-data --user com.syntevo.SmartGit
+
+# ...and to clean-up everything
 $ rm -rf .flatpak-builder/ build/
 $ flatpak uninstall --unused --user
+$ flatpak remote-delete --user flathub
 ----
 
 == Roadmap

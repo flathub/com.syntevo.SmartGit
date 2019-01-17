@@ -68,9 +68,9 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "293299d82081453d96ce31076473b35f24c33a235219a143565e2dd9e89d129e",
-          "size": 45010681,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_2.tar.gz"
+          "sha256": "e36409d837c7b029b7d6885fc094714a70a7b5b83e555f40bf2ed86637db0632",
+          "size": 45016053,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_4.tar.gz"
         },
         {
           "type": "file",

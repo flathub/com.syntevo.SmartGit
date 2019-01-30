@@ -9,6 +9,7 @@
     "--device=dri",
     "--env=SMARTGIT_JAVA_HOME=/app/extra/smartgit/jre/",
     "--filesystem=host",
+    "--filesystem=xdg-run/keyring",
     "--share=ipc",
     "--share=network",
     "--socket=ssh-auth",
@@ -33,8 +34,8 @@
       "sources": [
         {
           "type": "archive",
-          "sha256": "fce9a3a3297db5f3756c4553a2fc1fec209ee08178f8491e76ff4ff8fe7b8be9",
-          "url": "https://kernel.org/pub/software/scm/git/git-2.19.2.tar.xz"
+          "sha256": "9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9",
+          "url": "https://kernel.org/pub/software/scm/git/git-2.20.1.tar.xz"
         }
       ]
     },
@@ -47,9 +48,22 @@
       "sources": [
         {
           "type": "archive",
-          "sha256": "43e9311bdded82d43c574b075aafaf56681a3450c1ccf59cce9d362acabf1362",
+          "sha256": "c098092be413915793214a570cd51ef46089b6f6616b2f78e35ba374de613b5b",
           "strip-components": 0,
-          "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.6.0/git-lfs-linux-amd64-v2.6.0.tar.gz"
+          "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.6.1/git-lfs-linux-amd64-v2.6.1.tar.gz"
+        }
+      ]
+    },
+    {
+      "name": "openssh",
+      "config-opts": [
+        "--without-pie"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "sha256": "6b4b3ba2253d84ed3771c8050728d597c91cfce898713beb7b64a305b6f11aad",
+          "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-7.9p1.tar.gz"
         }
       ]
     },
@@ -57,8 +71,8 @@
       "name": "smartgit",
       "buildsystem": "simple",
       "build-commands": [
-        "install -Dm0755 -t /app/bin/ apply_extra",
         "install -Dm0755 smartgit.sh /app/bin/smartgit",
+        "install -Dm0755 -t /app/bin/ apply_extra",
         "install -Dm0644 -t /app/share/applications/ com.syntevo.SmartGit.desktop",
         "install -Dm0644 -t /app/share/icons/hicolor/scalable/apps/ com.syntevo.SmartGit.svg",
         "install -Dm0644 -t /app/share/metainfo/ com.syntevo.SmartGit.appdata.xml"
@@ -68,9 +82,9 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "e36409d837c7b029b7d6885fc094714a70a7b5b83e555f40bf2ed86637db0632",
-          "size": 45016053,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_4.tar.gz"
+          "sha256": "41390b66c2952b19866233e367ddde96636f0d7bf9fdd48532d74e2db452ba29",
+          "size": 47247772,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_5.tar.gz"
         },
         {
           "type": "file",

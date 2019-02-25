@@ -3,8 +3,8 @@
   "command": "smartgit",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "18.08",
-  "separate-locales": false,
   "sdk": "org.freedesktop.Sdk",
+  "separate-locales": false,
   "finish-args": [
     "--device=dri",
     "--env=SMARTGIT_JAVA_HOME=/app/extra/smartgit/jre/",
@@ -28,9 +28,7 @@
         "NO_PERL=YesPlease",
         "NO_TCLTK=YesPlease"
       ],
-      "post-install": [
-        "find . -type f -name perllocal.pod -delete"
-      ],
+      "post-install": ["find . -type f -name perllocal.pod -delete"],
       "sources": [
         {
           "type": "archive",
@@ -42,9 +40,7 @@
     {
       "name": "git-lfs",
       "buildsystem": "simple",
-      "build-commands": [
-        "install -Dm0755 git-lfs /app/libexec/git-core/"
-      ],
+      "build-commands": ["install -Dm0755 git-lfs /app/libexec/git-core/"],
       "sources": [
         {
           "type": "archive",
@@ -56,9 +52,9 @@
     },
     {
       "name": "openssh",
-      "config-opts": [
-        "--without-pie"
-      ],
+      "config-opts": ["--without-pie"],
+      "no-make-install": true,
+      "post-install": ["install -D -m0755 -t /app/bin/ ssh"],
       "sources": [
         {
           "type": "archive",
@@ -71,20 +67,20 @@
       "name": "smartgit",
       "buildsystem": "simple",
       "build-commands": [
-        "install -Dm0755 smartgit.sh /app/bin/smartgit",
-        "install -Dm0755 -t /app/bin/ apply_extra",
-        "install -Dm0644 -t /app/share/applications/ com.syntevo.SmartGit.desktop",
-        "install -Dm0644 -t /app/share/icons/hicolor/scalable/apps/ com.syntevo.SmartGit.svg",
-        "install -Dm0644 -t /app/share/metainfo/ com.syntevo.SmartGit.appdata.xml"
+        "install -D -m0755 smartgit.sh /app/bin/smartgit",
+        "install -D -m0644 -t /app/share/applications/ ${FLATPAK_ID}.desktop",
+        "install -D -m0644 -t /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg",
+        "install -D -m0644 -t /app/share/metainfo/ ${FLATPAK_ID}.appdata.xml",
+        "install -D -m0755 -t /app/bin/ apply_extra"
       ],
       "sources": [
         {
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "41390b66c2952b19866233e367ddde96636f0d7bf9fdd48532d74e2db452ba29",
-          "size": 47247772,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_5.tar.gz"
+          "sha256": "3c6e63715c9f87d68cdd1e88bf52ee41ecd9fceef3a5ed7f48e5edfbf6758a5f",
+          "size": 47256709,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_6.tar.gz"
         },
         {
           "type": "file",
@@ -108,9 +104,7 @@
         },
         {
           "type": "script",
-          "commands": [
-            "exec /app/extra/smartgit/bin/smartgit.sh \"$@\""
-          ],
+          "commands": ["exec /app/extra/smartgit/bin/smartgit.sh \"$@\""],
           "dest-filename": "smartgit.sh"
         }
       ]

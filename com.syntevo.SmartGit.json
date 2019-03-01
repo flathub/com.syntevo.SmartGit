@@ -40,13 +40,23 @@
     {
       "name": "git-lfs",
       "buildsystem": "simple",
-      "build-commands": ["install -Dm0755 git-lfs /app/libexec/git-core/"],
+      "build-commands": ["install -D -m0755 git-lfs /app/libexec/git-core/"],
       "sources": [
         {
           "type": "archive",
           "sha256": "c098092be413915793214a570cd51ef46089b6f6616b2f78e35ba374de613b5b",
           "strip-components": 0,
           "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.6.1/git-lfs-linux-amd64-v2.6.1.tar.gz"
+        }
+      ]
+    },
+    {
+      "name": "gnupg",
+      "sources": [
+        {
+          "type": "archive",
+          "sha256": "799dd37a86a1448732e339bd20440f4f5ee6e69755f6fd7a73ee8af30840c915",
+          "url": "https://gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.10.tar.bz2"
         }
       ]
     },

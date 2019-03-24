@@ -114,7 +114,10 @@
         },
         {
           "type": "script",
-          "commands": ["exec /app/extra/smartgit/bin/smartgit.sh \"$@\""],
+          "commands": [
+            "/app/bin/gpg-agent --daemon",
+            "exec /app/extra/smartgit/bin/smartgit.sh \"$@\""
+          ],
           "dest-filename": "smartgit.sh"
         }
       ]

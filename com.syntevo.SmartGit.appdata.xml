@@ -37,6 +37,7 @@
   <update_contact>info@syntevo.com</update_contact>
   <content_rating type="oars-1.1" />
   <releases>
+    <release type="stable" date="2019-05-21" version="18.2.8" />
     <release type="stable" date="2019-04-10" version="18.2.7" />
     <release type="stable" date="2019-02-25" version="18.2.6" />
     <release type="stable" date="2019-01-30" version="18.2.5" />

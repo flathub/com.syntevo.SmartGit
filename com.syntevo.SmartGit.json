@@ -13,6 +13,7 @@
     "--share=ipc",
     "--share=network",
     "--socket=ssh-auth",
+    "--socket=wayland",
     "--socket=x11",
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.freedesktop.secrets"
@@ -34,8 +35,8 @@
       "sources": [
         {
           "type": "archive",
-          "sha256": "8ccb1ce743ee991d91697e163c47c11be4bf81efbdd9fb0b4a7ad77cc0020d28",
-          "url": "https://kernel.org/pub/software/scm/git/git-2.21.0.tar.xz"
+          "sha256": "159e4b599f8af4612e70b666600a3139541f8bacc18124daf2cbe8d1b934f29f",
+          "url": "https://kernel.org/pub/software/scm/git/git-2.22.0.tar.xz"
         }
       ]
     },
@@ -64,8 +65,7 @@
           "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.0p1.tar.gz"
         }
       ]
-    },
-    {
+    }, {
       "name": "smartgit",
       "buildsystem": "simple",
       "build-commands": [
@@ -80,31 +80,26 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "ab100a10ab2f9705055a3d9bca8d1843763e2298a8dccb35ffa2a7609551f6cc",
-          "size": 48054506,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_8.tar.gz"
-        },
-        {
+          "sha256": "c7fcf775ee4076abdb4c9a6a93ba83d872d2055f0a11802ce2810f2d16570834",
+          "size": 48054783,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_9.tar.gz"
+        }, {
           "type": "file",
           "path": "com.syntevo.SmartGit.appdata.xml"
-        },
-        {
+        }, {
           "type": "file",
           "path": "com.syntevo.SmartGit.desktop"
-        },
-        {
+        }, {
           "type": "file",
           "path": "com.syntevo.SmartGit.svg"
-        },
-        {
+        }, {
           "type": "script",
           "commands": [
             "tar -zxf smartgit.tar.gz",
             "rm -f smartgit.tar.gz"
           ],
           "dest-filename": "apply_extra"
-        },
-        {
+        }, {
           "type": "script",
           "commands": ["exec /app/extra/smartgit/bin/smartgit.sh \"$@\""],
           "dest-filename": "smartgit.sh"

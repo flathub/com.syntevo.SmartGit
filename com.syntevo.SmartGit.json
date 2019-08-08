@@ -39,8 +39,7 @@
           "url": "https://kernel.org/pub/software/scm/git/git-2.22.0.tar.xz"
         }
       ]
-    },
-    {
+    }, {
       "name": "git-lfs",
       "buildsystem": "simple",
       "build-commands": ["install -D -m0755 git-lfs /app/libexec/git-core/"],
@@ -52,8 +51,7 @@
           "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.7.2/git-lfs-linux-amd64-v2.7.2.tar.gz"
         }
       ]
-    },
-    {
+    }, {
       "name": "openssh",
       "config-opts": ["--without-pie"],
       "no-make-install": true,
@@ -80,9 +78,9 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "c7fcf775ee4076abdb4c9a6a93ba83d872d2055f0a11802ce2810f2d16570834",
-          "size": 48054783,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-18_2_9.tar.gz"
+          "sha256": "a36d1031fdb7fc2e31efac5f4f0c7db21c273c72781459432897c7e700bc51ce",
+          "size": 50024161,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_0.tar.gz"
         }, {
           "type": "file",
           "path": "com.syntevo.SmartGit.appdata.xml"

@@ -35,8 +35,8 @@
       "sources": [
         {
           "type": "archive",
-          "sha256": "159e4b599f8af4612e70b666600a3139541f8bacc18124daf2cbe8d1b934f29f",
-          "url": "https://kernel.org/pub/software/scm/git/git-2.22.0.tar.xz"
+          "sha256": "234fa05b6839e92dc300b2dd78c92ec9c0c8d439f65e1d430a7034f60af16067",
+          "url": "https://kernel.org/pub/software/scm/git/git-2.23.0.tar.xz"
         }
       ]
     }, {
@@ -46,9 +46,9 @@
       "sources": [
         {
           "type": "archive",
-          "sha256": "89f5aa2c29800bbb71f5d4550edd69c5f83e3ee9e30f770446436dd7f4ef1d4c",
+          "sha256": "54054178deea7c97ce58edf9c0a2f79eb30c1e836fbc7e6dece9b2c9ff516863",
           "strip-components": 0,
-          "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.7.2/git-lfs-linux-amd64-v2.7.2.tar.gz"
+          "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.8.0/git-lfs-linux-amd64-v2.8.0.tar.gz"
         }
       ]
     }, {
@@ -78,9 +78,9 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "3718524ce18da8ae3c2f2e5db24efb26c30fbf064a94612cb62bc8b9afb78042",
-          "size": 50024264,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_1.tar.gz"
+          "sha256": "c462057afbfafc11a7b7fc48eed205a1ebb323ad90d69f2941d75814343ec130",
+          "size": 50033141,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_2.tar.gz"
         }, {
           "type": "file",
           "path": "com.syntevo.SmartGit.appdata.xml"

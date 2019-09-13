@@ -2,12 +2,12 @@
   "app-id": "com.syntevo.SmartGit",
   "command": "smartgit",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "18.08",
+  "runtime-version": "19.08",
   "sdk": "org.freedesktop.Sdk",
   "separate-locales": false,
   "finish-args": [
     "--device=dri",
-    "--env=SMARTGIT_JAVA_HOME=/app/extra/smartgit/jre/",
+    "--env=SMARTGIT_JAVA_HOME=/app/extra/smartgit/jre",
     "--filesystem=host",
     "--filesystem=xdg-run/keyring",
     "--share=ipc",
@@ -78,9 +78,9 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "c462057afbfafc11a7b7fc48eed205a1ebb323ad90d69f2941d75814343ec130",
-          "size": 50033141,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_2.tar.gz"
+          "sha256": "5687303e94b7f5d5d531c95d4a9487475db47bff71226a9297c6860365c55f59",
+          "size": 50032704,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_3.tar.gz"
         }, {
           "type": "file",
           "path": "com.syntevo.SmartGit.appdata.xml"

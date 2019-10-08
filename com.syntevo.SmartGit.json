@@ -21,47 +21,20 @@
   "modules": [
     {
       "name": "git",
-      "make-args": [
-        "INSTALL_SYMLINKS=1",
-        "NO_PERL=YesPlease",
-        "NO_TCLTK=YesPlease"
-      ],
-      "make-install-args": [
-        "INSTALL_SYMLINKS=1",
-        "NO_PERL=YesPlease",
-        "NO_TCLTK=YesPlease"
-      ],
-      "post-install": ["find . -type f -name perllocal.pod -delete"],
-      "sources": [
-        {
-          "type": "archive",
-          "sha256": "234fa05b6839e92dc300b2dd78c92ec9c0c8d439f65e1d430a7034f60af16067",
-          "url": "https://kernel.org/pub/software/scm/git/git-2.23.0.tar.xz"
-        }
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -D -m0755 $(which git) /app/bin/",
+        "install -D -m0755 $(which git-cvsserver) /app/bin/",
+        "install -D -m0755 $(which git-receive-pack) /app/bin/",
+        "install -D -m0755 $(which git-shell) /app/bin/",
+        "install -D -m0755 $(which git-upload-archive) /app/bin/",
+        "install -D -m0755 $(which git-upload-pack) /app/bin/"
       ]
     }, {
       "name": "git-lfs",
       "buildsystem": "simple",
-      "build-commands": ["install -D -m0755 git-lfs /app/libexec/git-core/"],
-      "sources": [
-        {
-          "type": "archive",
-          "sha256": "54054178deea7c97ce58edf9c0a2f79eb30c1e836fbc7e6dece9b2c9ff516863",
-          "strip-components": 0,
-          "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.8.0/git-lfs-linux-amd64-v2.8.0.tar.gz"
-        }
-      ]
-    }, {
-      "name": "openssh",
-      "config-opts": ["--without-pie"],
-      "no-make-install": true,
-      "post-install": ["install -D -m0755 -t /app/bin/ ssh"],
-      "sources": [
-        {
-          "type": "archive",
-          "sha256": "bd943879e69498e8031eb6b7f44d08cdc37d59a7ab689aa0b437320c3481fd68",
-          "url": "https://cloudflare.cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-8.0p1.tar.gz"
-        }
+      "build-commands": [
+        "install -D -m0755 git-lfs /app/bin/"
       ]
     }, {
       "name": "smartgit",

@@ -33,8 +33,14 @@
     }, {
       "name": "git-lfs",
       "buildsystem": "simple",
-      "build-commands": [
-        "install -D -m0755 -t /app/bin/ git-lfs"
+      "build-commands": ["install -D -m0755 git-lfs /app/libexec/git-core/"],
+      "sources": [
+        {
+          "type": "archive",
+          "sha256": "54054178deea7c97ce58edf9c0a2f79eb30c1e836fbc7e6dece9b2c9ff516863",
+          "strip-components": 0,
+          "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.8.0/git-lfs-linux-amd64-v2.8.0.tar.gz"
+        }
       ]
     }, {
       "name": "openssh",

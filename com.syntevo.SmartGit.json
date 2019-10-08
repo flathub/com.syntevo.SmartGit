@@ -51,6 +51,10 @@
           "url": "https://github.com/git-lfs/git-lfs/releases/download/v2.8.0/git-lfs-linux-amd64-v2.8.0.tar.gz"
         }
       ]
+    },
+      "name": "openssh",
+        "buildsystem": "simple",
+        "build-commands": ["install -D -m0755 -t /app/bin/ $(which ssh)"]
     }, {
       "name": "smartgit",
       "buildsystem": "simple",

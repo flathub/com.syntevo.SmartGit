@@ -33,7 +33,7 @@
     }, {
       "name": "git-lfs",
       "buildsystem": "simple",
-      "build-commands": ["install -D -m0755 git-lfs /app/libexec/git-core/"],
+      "build-commands": ["install -D -m0755 git-lfs /app/bin/"],
       "sources": [
         {
           "type": "archive",

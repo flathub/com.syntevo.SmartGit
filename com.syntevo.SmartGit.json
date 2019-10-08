@@ -21,28 +21,19 @@
   "modules": [
     {
       "name": "git",
-      "make-args": [
-        "INSTALL_SYMLINKS=1",
-        "NO_PERL=YesPlease",
-        "NO_TCLTK=YesPlease"
-      ],
-      "make-install-args": [
-        "INSTALL_SYMLINKS=1",
-        "NO_PERL=YesPlease",
-        "NO_TCLTK=YesPlease"
-      ],
-      "post-install": ["find . -type f -name perllocal.pod -delete"],
-      "sources": [
-        {
-          "type": "archive",
-          "sha256": "234fa05b6839e92dc300b2dd78c92ec9c0c8d439f65e1d430a7034f60af16067",
-          "url": "https://kernel.org/pub/software/scm/git/git-2.23.0.tar.xz"
-        }
+      "buildsystem": "simple",
+      "build-commands": [
+        "install -D -m0755 -t /app/bin/ $(which git)",
+        "install -D -m0755 -t /app/bin/ $(which git-cvsserver)",
+        "install -D -m0755 -t /app/bin/ $(which git-receive-pack)",
+        "install -D -m0755 -t /app/bin/ $(which git-shell)",
+        "install -D -m0755 -t /app/bin/ $(which git-upload-archive)",
+        "install -D -m0755 -t /app/bin/ $(which git-upload-pack)"
       ]
     }, {
       "name": "git-lfs",
       "buildsystem": "simple",
-      "build-commands": ["install -D -m0755 git-lfs /app/libexec/git-core/"],
+      "build-commands": ["install -D -m0755 git-lfs /app/bin/"],
       "sources": [
         {
           "type": "archive",

@@ -54,7 +54,7 @@
     }, {
       "name": "openssh",
       "buildsystem": "simple",
-      "build-commands": ["install -D -m0755 -t /app/bin/ $(which ssh)"]
+      "build-commands": ["ln -s /usr/bin/ssh /app/bin/ssh"]
     }, {
       "name": "smartgit",
       "buildsystem": "simple",

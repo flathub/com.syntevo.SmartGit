@@ -21,14 +21,23 @@
   "modules": [
     {
       "name": "git",
-      "buildsystem": "simple",
-      "build-commands": [
-        "install -D -m0755 -t /app/bin/ $(which git)",
-        "install -D -m0755 -t /app/bin/ $(which git-cvsserver)",
-        "install -D -m0755 -t /app/bin/ $(which git-receive-pack)",
-        "install -D -m0755 -t /app/bin/ $(which git-shell)",
-        "install -D -m0755 -t /app/bin/ $(which git-upload-archive)",
-        "install -D -m0755 -t /app/bin/ $(which git-upload-pack)"
+      "make-args": [
+        "INSTALL_SYMLINKS=1",
+        "NO_PERL=YesPlease",
+        "NO_TCLTK=YesPlease"
+      ],
+      "make-install-args": [
+        "INSTALL_SYMLINKS=1",
+        "NO_PERL=YesPlease",
+        "NO_TCLTK=YesPlease"
+      ],
+      "post-install": ["find . -type f -name perllocal.pod -delete"],
+      "sources": [
+        {
+          "type": "archive",
+          "sha256": "234fa05b6839e92dc300b2dd78c92ec9c0c8d439f65e1d430a7034f60af16067",
+          "url": "https://kernel.org/pub/software/scm/git/git-2.23.0.tar.xz"
+        }
       ]
     }, {
       "name": "git-lfs",
@@ -44,8 +53,8 @@
       ]
     }, {
       "name": "openssh",
-        "buildsystem": "simple",
-        "build-commands": ["install -D -m0755 -t /app/bin/ $(which ssh)"]
+      "buildsystem": "simple",
+      "build-commands": ["install -D -m0755 -t /app/bin/ $(which ssh)"]
     }, {
       "name": "smartgit",
       "buildsystem": "simple",

@@ -42,7 +42,7 @@
     }, {
       "name": "git-lfs",
       "buildsystem": "simple",
-      "build-commands": ["install -D -m0755 git-lfs /app/bin/"],
+      "build-commands": ["install -D --mode=0755 git-lfs /app/bin/"],
       "sources": [
         {
           "type": "archive",
@@ -54,25 +54,31 @@
     }, {
       "name": "openssh",
       "buildsystem": "simple",
-      "build-commands": ["ln -s /usr/bin/ssh /app/bin/ssh"]
+      "build-commands": ["ln --symbolic /usr/bin/ssh /app/bin/ssh"]
     }, {
       "name": "smartgit",
       "buildsystem": "simple",
       "build-commands": [
-        "install -D -m0755 smartgit.sh /app/bin/smartgit",
-        "install -D -m0644 -t /app/share/applications/ ${FLATPAK_ID}.desktop",
-        "install -D -m0644 -t /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg",
-        "install -D -m0644 -t /app/share/metainfo/ ${FLATPAK_ID}.appdata.xml",
-        "install -D -m0755 -t /app/bin/ apply_extra"
+        "install -D --mode=0755 entrypoint.sh /app/bin/smartgit",
+        "install -D --mode=0644 --target-directory=/app/share/applications/ com.syntevo.SmartGit.desktop",
+        "install -D --mode=0644 --target-directory=/app/share/icons/hicolor/scalable/apps/ com.syntevo.SmartGit.svg",
+        "install -D --mode=0644 --target-directory=/app/share/metainfo/ com.syntevo.SmartGit.appdata.xml",
+        "install -D --mode=0755 apply_extra.sh /app/bin/apply_extra"
       ],
       "sources": [
         {
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "d901de846276c80bbc12cd5004c23c617d58aba4fbb5e504320e4665278047f0",
-          "size": 50031161,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_4.tar.gz"
+          "sha256": "13d78de36c3103a94382d3ce038f6a119a982ebc39ecd013952087bfdbf694b0",
+          "size": 50036179,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_5.tar.gz"
+        }, {
+          "type": "file",
+          "path": "apply_extra.sh"
+        }, {
+          "type": "file",
+          "path": "entrypoint.sh"
         }, {
           "type": "file",
           "path": "com.syntevo.SmartGit.appdata.xml"
@@ -82,17 +88,6 @@
         }, {
           "type": "file",
           "path": "com.syntevo.SmartGit.svg"
-        }, {
-          "type": "script",
-          "commands": [
-            "tar -zxf smartgit.tar.gz",
-            "rm -f smartgit.tar.gz"
-          ],
-          "dest-filename": "apply_extra"
-        }, {
-          "type": "script",
-          "commands": ["exec /app/extra/smartgit/bin/smartgit.sh \"$@\""],
-          "dest-filename": "smartgit.sh"
         }
       ]
     }

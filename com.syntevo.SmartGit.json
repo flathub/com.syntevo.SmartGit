@@ -20,6 +20,36 @@
   ],
   "modules": [
     {
+      "name": "gcr",
+      "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/lib/girepository-1.0",
+        "/man",
+        "/share/aclocal",
+        "/share/doc",
+        "/share/gir-1.0",
+        "/share/gtk-doc",
+        "/share/info",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.a",
+        "*.la"
+      ],
+      "config-opts": [
+        "--disable-schemas-compile",
+        "--disable-static",
+        "--disable-update-mime",
+        "--enable-valgrind=no"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "sha256": "29df50974a90987af694c0fb8926a6b366e68cacd8abd813817cfe1eb5d54524",
+          "url": "https://download.gnome.org/sources/gcr/3.34/gcr-3.34.0.tar.xz"
+        }
+      ]
+    }, {
       "name": "git",
       "make-args": [
         "INSTALL_SYMLINKS=1",
@@ -52,9 +82,56 @@
         }
       ]
     }, {
+      "name": "gpg",
+      "sources": [
+        {
+          "type": "archive",
+          "sha256": "afa262868e39b651a2db4c071fba90415154243e83a830ca00516f9a807fd514",
+          "url": "https://www.gnupg.org/ftp/gcrypt/gnupg/gnupg-2.2.17.tar.bz2"
+        }
+      ]
+    }, {
       "name": "openssh",
       "buildsystem": "simple",
       "build-commands": ["ln --symbolic /usr/bin/ssh /app/bin/ssh"]
+    }, {
+      "name": "pinentry",
+      "cleanup": [
+        "/include",
+        "/lib/pkgconfig",
+        "/lib/girepository-1.0",
+        "/man",
+        "/share/aclocal",
+        "/share/doc",
+        "/share/gir-1.0",
+        "/share/gtk-doc",
+        "/share/info",
+        "/share/man",
+        "/share/pkgconfig",
+        "*.a",
+        "*.la"
+      ],
+      "config-opts": [
+        "--disable-fallback-curses",
+        "--disable-ncurses",
+        "--disable-pinentry-curses",
+        "--disable-pinentry-emacs",
+        "--disable-pinentry-fltk",
+        "--disable-pinentry-gtk2",
+        "--disable-pinentry-qt5",
+        "--disable-pinentry-tqt",
+        "--disable-pinentry-tty",
+        "--enable-libsecret=no",
+        "--enable-pinentry-gnome3",
+        "--without-libcap"
+      ],
+      "sources": [
+        {
+          "type": "archive",
+          "sha256": "68076686fa724a290ea49cdf0d1c0c1500907d1b759a3bcbfbec0293e8f56570",
+          "url": "https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.1.0.tar.bz2"
+        }
+      ]
     }, {
       "name": "smartgit",
       "buildsystem": "simple",

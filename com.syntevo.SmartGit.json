@@ -25,16 +25,11 @@
       "name": "gcr",
       "cleanup": [
         "/include",
-        "/lib/pkgconfig",
+        "/lib/debug",
         "/lib/girepository-1.0",
-        "/man",
-        "/share/aclocal",
-        "/share/doc",
+        "/lib/pkgconfig",
         "/share/gir-1.0",
         "/share/gtk-doc",
-        "/share/info",
-        "/share/man",
-        "/share/pkgconfig",
         "*.a",
         "*.la"
       ],
@@ -91,16 +86,8 @@
       "name": "pinentry",
       "cleanup": [
         "/include",
-        "/lib/pkgconfig",
-        "/lib/girepository-1.0",
-        "/man",
-        "/share/aclocal",
-        "/share/doc",
-        "/share/gir-1.0",
-        "/share/gtk-doc",
+        "/lib/debug",
         "/share/info",
-        "/share/man",
-        "/share/pkgconfig",
         "*.a",
         "*.la"
       ],
@@ -140,9 +127,9 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "99a166a2b1cf104782739143cf4f4862c9ce7be68dd8af6d86b63d8d9e324576",
-          "size": 50043598,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_6.tar.gz"
+          "sha256": "7882e14d900ab1d708c51bb07be462f2406d0b07d57cecc07c82a583df48e3f0",
+          "size": 50040894,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_7.tar.gz"
         }, {
           "type": "file",
           "path": "apply_extra.sh"

@@ -127,9 +127,9 @@
           "type": "extra-data",
           "filename": "smartgit.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "7882e14d900ab1d708c51bb07be462f2406d0b07d57cecc07c82a583df48e3f0",
-          "size": 50040894,
-          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-19_1_7.tar.gz"
+          "sha256": "8fcb23400984e5a309877a05f9ae668f51e6715b56544d2c2bc486316d120c37",
+          "size": 50247682,
+          "url": "https://www.syntevo.com/downloads/smartgit/smartgit-linux-20_1_0.tar.gz"
         }, {
           "type": "file",
           "path": "apply_extra.sh"

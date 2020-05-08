@@ -17,7 +17,9 @@
     "--socket=x11",
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.freedesktop.secrets",
-    "--talk-name=org.gnome.keyring.SystemPrompter"
+    "--talk-name=org.gnome.keyring.SystemPrompter",
+    "--talk-name=org.gtk.vfs",
+    "--talk-name=org.gtk.vfs.*"
   ],
   "modules": [
     {

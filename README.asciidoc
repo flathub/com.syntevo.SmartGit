@@ -23,8 +23,3 @@ $ rm --force --recursive .flatpak-builder/ build/
 $ flatpak uninstall --unused --user
 $ flatpak remote-delete --user flathub
 ----
-
-== Roadmap
-:uri-issues-tracker: https://github.com/flathub/com.syntevo.SmartGit/issues/
-
-See the {uri-issues-tracker}[Issues^] tracker.

@@ -13,7 +13,7 @@ Assuming `flatpak`, `flatpak-builder`, and `git` are installed, then execute the
 $ git clone https://github.com/flathub/com.syntevo.SmartGit.git
 $ cd com.syntevo.SmartGit/
 $ flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-$ flatpak-builder build --force-clean --install-deps-from=flathub --install --user com.syntevo.SmartGit.json
+$ flatpak-builder build --force-clean --install-deps-from=flathub --install --user com.syntevo.SmartGit.yml
 
 # ...to uninstall the artifact
 $ flatpak uninstall --delete-data --user com.syntevo.SmartGit

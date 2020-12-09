@@ -13,7 +13,6 @@ finish-args:
   - --share=ipc
   - --share=network
   - --socket=ssh-auth
-  - --socket=wayland
   - --socket=x11
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.secrets
@@ -36,12 +35,14 @@ modules:
       - --enable-valgrind=no
     sources:
       - type: archive
-        sha256: 29df50974a90987af694c0fb8926a6b366e68cacd8abd813817cfe1eb5d54524
-        url: https://download.gnome.org/sources/gcr/3.34/gcr-3.34.0.tar.xz
+        sha256: a64cc7b65757fc2cd16de1708d132a16d05cd1f62c6eba436d56fe45d4ba27e1
+        url: https://download.gnome.org/sources/gcr/3.38/gcr-3.38.0.tar.xz
+
   - name: openssh
     buildsystem: simple
     build-commands:
       - ln --symbolic /usr/bin/ssh /app/bin/ssh
+
   - name: pinentry
     cleanup:
       - "/include"
@@ -66,6 +67,7 @@ modules:
       - type: archive
         sha256: 68076686fa724a290ea49cdf0d1c0c1500907d1b759a3bcbfbec0293e8f56570
         url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.1.0.tar.bz2
+
   - name: smartgit
     buildsystem: simple
     build-commands:

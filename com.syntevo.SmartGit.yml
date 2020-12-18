@@ -85,8 +85,6 @@ modules:
         size: 124011683
         url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-20_2_1.tar.gz
       - type: file
-        path: apply_extra.sh
-      - type: file
         path: com.syntevo.SmartGit.metainfo.xml
       - type: file
         path: com.syntevo.SmartGit.desktop
@@ -94,3 +92,8 @@ modules:
         path: com.syntevo.SmartGit.svg
       - type: file
         path: entrypoint.sh
+      - type: script
+        commands:
+          - tar --extract --file=smartgit.tar.gz --gunzip
+          - rm --force smartgit.tar.gz
+        dest-filename: apply_extra.sh

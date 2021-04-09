@@ -2,7 +2,7 @@
 app-id: com.syntevo.SmartGit
 command: smartgit
 runtime: org.gnome.Platform
-runtime-version: "3.38"
+runtime-version: "40"
 sdk: org.gnome.Sdk
 separate-locales: false
 finish-args:
@@ -24,8 +24,12 @@ modules:
       - "/lib/debug"
       - "/lib/girepository-1.0"
       - "/lib/pkgconfig"
+      - "/man"
       - "/share/gir-1.0"
       - "/share/gtk-doc"
+      - "/share/doc"
+      - "/share/man"
+      - "/share/pkgconfig"
       - "*.a"
       - "*.la"
     config-opts:

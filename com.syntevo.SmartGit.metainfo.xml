@@ -20,16 +20,16 @@
   <launchable type="desktop-id">com.syntevo.SmartGit.desktop</launchable>
   <screenshots>
     <screenshot type="default">
-      <image>https://www.syntevo.com/assets/images/products/smartgit/opener-481720cb.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://www.syntevo.com/assets/images/products/smartgit/why-1-830d8d8c.png</image>
+      <image>https://www.syntevo.com/assets/images/products/smartgit/opener-c234cfe0.png</image>
     </screenshot>
     <screenshot>
       <image>https://www.syntevo.com/assets/images/products/smartgit/why-2-ada71514.png</image>
     </screenshot>
     <screenshot>
-      <image>https://www.syntevo.com/assets/images/products/smartgit/why-3-a5b1e461.png</image>
+      <image>https://www.syntevo.com/assets/images/products/smartgit/why-4-c71fa0c9.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.syntevo.com/assets/images/products/smartgit/why-3-deb1e175.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://www.syntevo.com/smartgit/</url>

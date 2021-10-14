@@ -88,6 +88,11 @@ modules:
         sha256: f910759a9c6620fbff971ac6e88c91e2118abdbda63b784a299be1c6d8b2d1db
         size: 98799490
         url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-21_1_2.tar.gz
+        x-checker-data:
+          type: html
+          url: https://www.syntevo.com/smartgit/download/
+          url-template: https://www.syntevo.com/downloads/smartgit/smartgit-linux-${version0}_${version1}_${version2}.tar.gz
+          version-pattern: Version ([\\d\\.-]*)
       - type: file
         path: com.syntevo.SmartGit.metainfo.xml
       - type: file

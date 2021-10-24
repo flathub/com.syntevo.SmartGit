@@ -92,7 +92,7 @@ modules:
           type: html
           url: https://www.syntevo.com/smartgit/download/
           url-template: https://www.syntevo.com/downloads/smartgit/smartgit-linux-${version0}_${version1}_${version2}.tar.gz
-          version-pattern: Version ([\\d\\.-]*)
+          version-pattern: Version ([\d\.-]+)
       - type: file
         path: com.syntevo.SmartGit.metainfo.xml
       - type: file

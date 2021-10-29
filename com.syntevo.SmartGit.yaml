@@ -1,8 +1,7 @@
----
 app-id: com.syntevo.SmartGit
 command: smartgit
 runtime: org.gnome.Platform
-runtime-version: "41"
+runtime-version: '41'
 sdk: org.gnome.Sdk
 separate-locales: false
 finish-args:
@@ -20,18 +19,18 @@ finish-args:
 modules:
   - name: gcr
     cleanup:
-      - "/include"
-      - "/lib/debug"
-      - "/lib/girepository-1.0"
-      - "/lib/pkgconfig"
-      - "/man"
-      - "/share/gir-1.0"
-      - "/share/gtk-doc"
-      - "/share/doc"
-      - "/share/man"
-      - "/share/pkgconfig"
-      - "*.a"
-      - "*.la"
+      - /include
+      - /lib/debug
+      - /lib/girepository-1.0
+      - /lib/pkgconfig
+      - /man
+      - /share/gir-1.0
+      - /share/gtk-doc
+      - /share/doc
+      - /share/man
+      - /share/pkgconfig
+      - '*.a'
+      - '*.la'
     config-opts:
       - --disable-schemas-compile
       - --disable-static
@@ -49,11 +48,11 @@ modules:
 
   - name: pinentry
     cleanup:
-      - "/include"
-      - "/lib/debug"
-      - "/share/info"
-      - "*.a"
-      - "*.la"
+      - /include
+      - /lib/debug
+      - /share/info
+      - '*.a'
+      - '*.la'
     config-opts:
       - --disable-fallback-curses
       - --disable-ncurses
@@ -77,7 +76,8 @@ modules:
     build-commands:
       - install -D --mode=0755 entrypoint.sh /app/bin/smartgit
       - install -D --mode=0644 --target-directory=/app/share/applications/ com.syntevo.SmartGit.desktop
-      - install -D --mode=0644 --target-directory=/app/share/icons/hicolor/scalable/apps/ com.syntevo.SmartGit.svg
+      - install -D --mode=0644 --target-directory=/app/share/icons/hicolor/scalable/apps/
+        com.syntevo.SmartGit.svg
       - install -D --mode=0644 --target-directory=/app/share/metainfo/ com.syntevo.SmartGit.metainfo.xml
       - install -D --mode=0755 apply_extra.sh /app/bin/apply_extra
     sources:
@@ -85,9 +85,9 @@ modules:
         filename: smartgit.tar.gz
         only-arches:
           - x86_64
-        sha256: 7934affead3ad2e22cca0b9dd21c0d1c7a06aac4b54db90672fa7683b42c9091
-        size: 98801386
-        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-21_1_2.tar.gz
+        sha256: 532fd5445c1bedd5c6dbaadac333be3a03e6aaeed0a231bc22b35eeec5cf85c5
+        size: 98802775
+        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-21_1_3.tar.gz
         x-checker-data:
           type: html
           url: https://www.syntevo.com/smartgit/download/

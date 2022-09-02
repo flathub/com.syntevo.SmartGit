@@ -37,6 +37,7 @@
   <update_contact>info@syntevo.com</update_contact>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="21.2.4" date="2022-09-02"/>
     <release version="21.2.3" date="2022-05-30"/>
     <release version="21.2.2" date="2022-01-27"/>
     <release version="21.2.1" date="2021-12-22"/>

@@ -20,16 +20,16 @@ modules:
   - name: gcr
     buildsystem: meson
     cleanup:
-      - "/include"
-      - "/lib/debug"
-      - "/lib/pkgconfig"
-      - "/man"
-      - "/share/gtk-doc"
-      - "/share/info"
-      - "/share/man"
-      - "/share/pkgconfig"
-      - "*.a"
-      - "*.la"
+      - /include
+      - /lib/debug
+      - /lib/pkgconfig
+      - /man
+      - /share/gtk-doc
+      - /share/info
+      - /share/man
+      - /share/pkgconfig
+      - '*.a'
+      - '*.la'
     config-opts:
       - -Dgtk_doc=false
     sources:
@@ -44,11 +44,11 @@ modules:
 
   - name: pinentry
     cleanup:
-      - "/include"
-      - "/lib/debug"
-      - "/share/info"
-      - "*.a"
-      - "*.la"
+      - /include
+      - /lib/debug
+      - /share/info
+      - '*.a'
+      - '*.la'
     config-opts:
       - --disable-fallback-curses
       - --disable-ncurses
@@ -72,7 +72,8 @@ modules:
     build-commands:
       - install -D --mode=0755 entrypoint.sh /app/bin/smartgit
       - install -D --mode=0644 --target-directory=/app/share/applications/ com.syntevo.SmartGit.desktop
-      - install -D --mode=0644 --target-directory=/app/share/icons/hicolor/scalable/apps/ com.syntevo.SmartGit.svg
+      - install -D --mode=0644 --target-directory=/app/share/icons/hicolor/scalable/apps/
+        com.syntevo.SmartGit.svg
       - install -D --mode=0644 --target-directory=/app/share/metainfo/ com.syntevo.SmartGit.metainfo.xml
       - install -D --mode=0755 apply_extra.sh /app/bin/apply_extra
     sources:
@@ -80,9 +81,9 @@ modules:
         filename: smartgit.tar.gz
         only-arches:
           - x86_64
-        sha256: b703750a59e3d7b03621438e86fb3c86ce8fbaf0bcd63f46a85d322889372244
-        size: 104537461
-        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-22_1_1.tar.gz
+        sha256: 8bff52a2f07cb9b412d74a5c746b02d9c15ca7b6a05122da7258d843142d5fe9
+        size: 104539615
+        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-22_1_2.tar.gz
         x-checker-data:
           type: html
           url: https://www.syntevo.com/smartgit/download/

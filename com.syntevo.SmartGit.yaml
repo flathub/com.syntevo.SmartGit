@@ -81,9 +81,9 @@ modules:
         filename: smartgit.tar.gz
         only-arches:
           - x86_64
-        sha256: 7b96e0200edd6e54435afc02d9da91151f92a7ab8c01641b86532a1bc6b8bd99
-        size: 104545015
-        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-22_1_4.tar.gz
+        sha256: b37d6c6040b583b78b3214fd5249a36c19c778f63dc2740f9a01905e0557e23e
+        size: 104544527
+        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-22_1_5.tar.gz
         x-checker-data:
           type: html
           url: https://www.syntevo.com/smartgit/download/

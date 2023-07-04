@@ -99,6 +99,7 @@ modules:
         path: entrypoint.sh
       - type: script
         commands:
-          - tar --extract --file=smartgit.tar.gz --gunzip
+          - tar --extract --file smartgit.tar.gz --gunzip
+          - rm --force ./smartgit/checksums
           - rm --force smartgit.tar.gz
         dest-filename: apply_extra.sh

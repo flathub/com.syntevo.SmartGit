@@ -1,18 +1,18 @@
 app-id: com.syntevo.SmartGit
 command: smartgit
 runtime: org.gnome.Platform
-runtime-version: '43'
+runtime-version: '44'
 sdk: org.gnome.Sdk
 separate-locales: false
 finish-args:
   - --device=dri
+  - --socket=fallback-x11
   - --filesystem=host
   - --filesystem=xdg-run/gnupg:ro
   - --filesystem=xdg-run/keyring
   - --share=ipc
   - --share=network
   - --socket=ssh-auth
-  - --socket=x11
   - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.gnome.keyring.SystemPrompter
@@ -70,12 +70,11 @@ modules:
   - name: smartgit
     buildsystem: simple
     build-commands:
-      - install -D --mode=0755 entrypoint.sh /app/bin/smartgit
-      - install -D --mode=0644 --target-directory=/app/share/applications/ com.syntevo.SmartGit.desktop
-      - install -D --mode=0644 --target-directory=/app/share/icons/hicolor/scalable/apps/
-        com.syntevo.SmartGit.svg
-      - install -D --mode=0644 --target-directory=/app/share/metainfo/ com.syntevo.SmartGit.metainfo.xml
-      - install -D --mode=0755 apply_extra.sh /app/bin/apply_extra
+      - install -D --mode 0755 entrypoint.sh /app/bin/smartgit
+      - install -D --mode 0644 --target-directory /app/share/applications/ com.syntevo.SmartGit.desktop
+      - install -D --mode 0644 --target-directory /app/share/icons/hicolor/scalable/apps/ com.syntevo.SmartGit.svg
+      - install -D --mode 0644 --target-directory /app/share/metainfo/ com.syntevo.SmartGit.metainfo.xml
+      - install -D --mode 0755 apply_extra.sh /app/bin/apply_extra
     sources:
       - type: extra-data
         filename: smartgit.tar.gz
@@ -99,6 +98,6 @@ modules:
         path: entrypoint.sh
       - type: script
         commands:
-          - tar --extract --file=smartgit.tar.gz --gunzip
+          - tar --extract --file smartgit.tar.gz --gunzip
           - rm --force smartgit.tar.gz
         dest-filename: apply_extra.sh

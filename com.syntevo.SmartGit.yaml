@@ -72,7 +72,8 @@ modules:
     build-commands:
       - install -D --mode 0755 entrypoint.sh /app/bin/smartgit
       - install -D --mode 0644 --target-directory /app/share/applications/ com.syntevo.SmartGit.desktop
-      - install -D --mode 0644 --target-directory /app/share/icons/hicolor/scalable/apps/ com.syntevo.SmartGit.svg
+      - install -D --mode 0644 --target-directory /app/share/icons/hicolor/scalable/apps/
+        com.syntevo.SmartGit.svg
       - install -D --mode 0644 --target-directory /app/share/metainfo/ com.syntevo.SmartGit.metainfo.xml
       - install -D --mode 0755 apply_extra.sh /app/bin/apply_extra
     sources:
@@ -80,9 +81,9 @@ modules:
         filename: smartgit.tar.gz
         only-arches:
           - x86_64
-        sha256: b816c930b2ec0ce3905a7e9fbc067be648141b55a22c63214c5343512c7c7eb8
-        size: 104558382
-        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-22_1_6.tar.gz
+        sha256: 138cd50d6afd604de39ed907a20d3e63ac551c9cf643c0262d60f1b84abeec81
+        size: 104566745
+        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-22_1_7.tar.gz
         x-checker-data:
           type: html
           url: https://www.syntevo.com/smartgit/download/

@@ -15,6 +15,10 @@ finish-args:
   - --talk-name=org.gnome.keyring.SystemPrompter
 
 modules:
+  # -----------------------------------------------------------------------------------------------
+  #   D E P E N D E N C I E S
+  # -----------------------------------------------------------------------------------------------
+
   - name: gcr
     buildsystem: meson
     cleanup:
@@ -67,14 +71,17 @@ modules:
         sha256: cd12a064013ed18e2ee8475e669b9f58db1b225a0144debdb85a68cecddba57f
         url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.1.1.tar.bz2
 
+  # -----------------------------------------------------------------------------------------------
+  #
+  # -----------------------------------------------------------------------------------------------
+
   - name: smartgit
     buildsystem: simple
     build-commands:
       - install -D --mode 0755 entrypoint.sh /app/bin/smartgit
-      - install -D --mode 0644 --target-directory /app/share/applications/ com.syntevo.SmartGit.desktop
-      - install -D --mode 0644 --target-directory /app/share/icons/hicolor/scalable/apps/
-        com.syntevo.SmartGit.svg
-      - install -D --mode 0644 --target-directory /app/share/metainfo/ com.syntevo.SmartGit.metainfo.xml
+      - install -D --mode 0644 --target-directory /app/share/applications/ ${FLATPAK_ID}.desktop
+      - install -D --mode 0644 --target-directory /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
+      - install -D --mode 0644 --target-directory /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
       - install -D --mode 0755 apply_extra.sh /app/bin/apply_extra
     sources:
       - type: extra-data
@@ -90,9 +97,9 @@ modules:
           url-template: https://www.syntevo.com/downloads/smartgit/smartgit-linux-${version0}_${version1}_${version2}.tar.gz
           version-pattern: Version ([\d\.-]+)
       - type: file
-        path: com.syntevo.SmartGit.metainfo.xml
-      - type: file
         path: com.syntevo.SmartGit.desktop
+      - type: file
+        path: com.syntevo.SmartGit.metainfo.xml
       - type: file
         path: com.syntevo.SmartGit.svg
       - type: file

@@ -4,13 +4,14 @@ command: smartgit
 
 finish-args:
   - --device=dri
-  - --socket=fallback-x11
   - --filesystem=host
   - --filesystem=xdg-run/gnupg:ro
   - --filesystem=xdg-run/keyring
   - --share=ipc
   - --share=network
+  - --socket=fallback-x11
   - --socket=ssh-auth
+  - --socket=wayland
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.gnome.keyring.SystemPrompter
 
@@ -86,11 +87,9 @@ modules:
     sources:
       - type: extra-data
         filename: smartgit.tar.gz
-        only-arches:
-          - x86_64
-        sha256: 138cd50d6afd604de39ed907a20d3e63ac551c9cf643c0262d60f1b84abeec81
-        size: 104566745
-        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-22_1_7.tar.gz
+        sha256: e8d985e7fa2d315101c6308e66a890cbf13bed04f3f4afca6ea8ce1fff82392c
+        size: 109868124
+        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-23_1_0.tar.gz
         x-checker-data:
           type: html
           url: https://www.syntevo.com/smartgit/download/

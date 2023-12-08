@@ -82,16 +82,17 @@ modules:
       - install -D --mode 0755 entrypoint.sh /app/bin/smartgit
       - install -D --mode 0644 --target-directory /app/share/applications/ ${FLATPAK_ID}.desktop
       - install -D --mode 0644 --target-directory /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
-      - install -D --mode 0644 --target-directory /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
+      - install -D --mode 0644 --target-directory /app/share/icons/hicolor/scalable/apps/
+        ${FLATPAK_ID}.svg
       - install -D --mode 0755 apply_extra.sh /app/bin/apply_extra
     sources:
       - type: extra-data
         filename: smartgit.tar.gz
         only-arches:
           - x86_64
-        sha256: e8d985e7fa2d315101c6308e66a890cbf13bed04f3f4afca6ea8ce1fff82392c
-        size: 109868124
-        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-23_1_0.tar.gz
+        sha256: 2d707e3b2980a498cbe1b80e67c55f775f778d91d56d0e86db39ab1cd13f3899
+        size: 109870459
+        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-23_1_1.tar.gz
         x-checker-data:
           type: html
           url: https://www.syntevo.com/smartgit/download/

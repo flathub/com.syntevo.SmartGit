@@ -79,17 +79,14 @@ modules:
   - name: smartgit
     buildsystem: simple
     build-commands:
-      - install -D --mode 0755 entrypoint.sh /app/bin/smartgit
-      - install -D --mode 0644 --target-directory /app/share/applications/ ${FLATPAK_ID}.desktop
-      - install -D --mode 0644 --target-directory /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
-      - install -D --mode 0644 --target-directory /app/share/icons/hicolor/scalable/apps/
-        ${FLATPAK_ID}.svg
-      - install -D --mode 0755 apply_extra.sh /app/bin/apply_extra
+      - install -D --mode 0644 --target-directory ${FLATPAK_DEST}/share/applications/ ${FLATPAK_ID}.desktop
+      - install -D --mode 0644 --target-directory ${FLATPAK_DEST}/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
+      - install -D --mode 0644 --target-directory ${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
+      - install -D --mode 0755 entrypoint.sh ${FLATPAK_DEST}/bin/smartgit
+      - install -D --mode 0755 apply_extra.sh ${FLATPAK_DEST}/bin/apply_extra
     sources:
       - type: extra-data
         filename: smartgit.tar.gz
-        only-arches:
-          - x86_64
         sha256: 2d707e3b2980a498cbe1b80e67c55f775f778d91d56d0e86db39ab1cd13f3899
         size: 109870459
         url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-23_1_1.tar.gz

@@ -39,8 +39,8 @@ modules:
       - -Dvapi=false
     sources:
       - type: archive
-        sha256: 9ceaad29284ba919b9216e2888c18ec67240c2c93b3a4856bc5488bbc1f3a383
-        url: https://download.gnome.org/sources/gcr/4.1/gcr-4.1.0.tar.xz
+        sha256: c3ee8728e4364b0397f435fa20f92f901ab139d2b264f4e059d67b3c0f43cd36
+        url: https://download.gnome.org/sources/gcr/4.3/gcr-4.3.0.tar.xz
 
   - name: openssh
     buildsystem: simple
@@ -69,8 +69,8 @@ modules:
       - --without-libcap
     sources:
       - type: archive
-        sha256: cd12a064013ed18e2ee8475e669b9f58db1b225a0144debdb85a68cecddba57f
-        url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.1.1.tar.bz2
+        sha256: bc72ee27c7239007ab1896c3c2fae53b076e2c9bd2483dc2769a16902bce8c04
+        url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.3.1.tar.bz2
 
   # -----------------------------------------------------------------------------------------------
   #
@@ -111,7 +111,7 @@ modules:
 
 runtime: org.gnome.Platform
 
-runtime-version: '46'
+runtime-version: '47'
 
 sdk: org.gnome.Sdk
 

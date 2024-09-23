@@ -1,8 +1,8 @@
 = syntevo SmartGit
 :uri-smartgit-home: https://www.syntevo.com/smartgit/
 
-{uri-smartgit-home}[SmartGit^] is a graphical Git client with support for SVN and Pull Requests for GitHub and
-Bitbucket. SmartGit runs on Windows, macOS and Linux.
+{uri-smartgit-home}[SmartGit^] is a powerful Git client with support for GitHub, GitLab, Azure DevOps and Bitbucket.
+It runs on Linux, macOS and Windows.
 
 == Build, Install and Run Flatpak (locally)
 

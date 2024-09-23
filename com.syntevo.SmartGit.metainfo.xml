@@ -7,13 +7,12 @@
   <summary>Get your commit done</summary>
   <description>
     <p>
-      SmartGit is a graphical Git client with support for SVN and Pull Requests for GitHub and Bitbucket. SmartGit runs
-      on Windows, macOS and Linux.
+      SmartGit is a powerful graphical Git client. SmartGit runs
+      on all three major platforms: Linux, macOS and Windows.
     </p>
     <p>
-      SmartGit comes with special integrations for GitHub, BitBucket and BitBucket Server (former Atlassian Stash) to
-      create and resolve Pull Requests and Review Comments. Of course, you can use SmartGit like any other Git client
-      with your own Git repositories or other hosting providers (e.g. GitLab).
+      SmartGit comes with integrations for GitHub, GitLab, Azure DevOps and BitBucket for easy cloning, creating Pull Requests and adding Review Comments.
+      Of course, you can use SmartGit with your own Git repositories or other hosting providers.
     </p>
     <p>NOTE: This wrapper is not verified by, affiliated with, or supported by syntevo GmbH.</p>
   </description>

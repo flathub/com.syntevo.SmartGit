@@ -43,9 +43,9 @@ modules:
           - tar --extract --file smartgit.tar.gz --gunzip
           - rm --force smartgit.tar.gz
         dest-filename: apply_extra.sh
-runtime: org.gnome.Platform
-runtime-version: "47"
-sdk: org.gnome.Sdk
+runtime: org.freedesktop.Platform
+runtime-version: "24.08"
+sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:
   - proprietary

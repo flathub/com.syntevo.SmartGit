@@ -31,8 +31,8 @@ modules:
       - /share/info
       - /share/man
       - /share/pkgconfig
-      - '*.a'
-      - '*.la'
+      - "*.a"
+      - "*.la"
     config-opts:
       - -Dgtk_doc=false
       - -Dintrospection=false
@@ -52,8 +52,8 @@ modules:
       - /include
       - /lib/debug
       - /share/info
-      - '*.a'
-      - '*.la'
+      - "*.a"
+      - "*.la"
     config-opts:
       - --disable-fallback-curses
       - --disable-ncurses
@@ -111,8 +111,10 @@ modules:
 
 runtime: org.gnome.Platform
 
-runtime-version: '47'
+runtime-version: "47"
 
 sdk: org.gnome.Sdk
 
 separate-locales: false
+#
+# Commit and check signature

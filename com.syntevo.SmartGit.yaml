@@ -23,9 +23,9 @@ modules:
     sources:
       - type: extra-data
         filename: smartgit.tar.gz
-        sha256: 91b21cb04eb3f8648e724622fa1fee754b66339501423675599e2572463a2443
-        size: 109895776
-        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-23_1_4.tar.gz
+        sha256: d1b93aab3500c1c6394344bc68a125f957c092bc4ace58225c504275cc56a043
+        size: 114211032
+        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-24_1_0.tar.gz
         x-checker-data:
           type: html
           url: https://www.syntevo.com/smartgit/download/

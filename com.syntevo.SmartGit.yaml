@@ -2,7 +2,7 @@ app-id: com.syntevo.SmartGit
 command: smartgit
 finish-args:
   - --device=dri
-  - --filesystem=host
+  - --filesystem=home
   - --filesystem=xdg-run/gnupg
   - --filesystem=xdg-run/keyring
   - --share=ipc
@@ -45,7 +45,7 @@ modules:
           - rm --force smartgit.tar.gz
         dest-filename: apply_extra.sh
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:

@@ -42,10 +42,10 @@ modules:
       - type: script
         commands:
           - tar --extract --file smartgit.tar.gz --gunzip
-          - rm --force smartgit.tar.gz
+          - rm smartgit.tar.gz
         dest-filename: apply_extra.sh
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:

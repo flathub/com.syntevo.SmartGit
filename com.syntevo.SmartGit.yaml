@@ -23,9 +23,9 @@ modules:
     sources:
       - type: extra-data
         filename: smartgit.tar.gz
-        sha256: d4928548819413c6f5c96060e35c7e1d15a09a0e69ad9176f8d0ff488778355b
-        size: 114330306
-        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-24_1_4.tar.gz
+        sha256: 62ab9e4dbc00f4a7171091b94de5a43f3ccdc809e7250d7e55062ca99292dbf2
+        size: 114329564
+        url: https://www.syntevo.com/downloads/smartgit/smartgit-linux-24_1_5.tar.gz
         x-checker-data:
           type: html
           url: https://www.syntevo.com/smartgit/download/
@@ -45,7 +45,7 @@ modules:
           - rm smartgit.tar.gz
         dest-filename: apply_extra.sh
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:

@@ -1,55 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.syntevo.SmartGit</id>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LicenseRef-proprietary</project_license>
-  <name>SmartGit</name>
-  <summary>Get your commit done</summary>
+  <content_rating type="oars-1.1" />
   <description>
+    <p>SmartGit is a powerful, cross-platform Git GUI that works the way you do.</p>
     <p>
-      SmartGit is a powerful graphical Git client. SmartGit runs
-      on all three major platforms: Linux, macOS and Windows.
+      SmartGit is particularly known for its user-friendly interface and robust features that cater
+      to both beginners and experienced users.
     </p>
-    <p>
-      SmartGit comes with integrations for GitHub, GitLab, Azure DevOps and BitBucket for easy cloning, creating Pull Requests and adding Review Comments.
-      Of course, you can use SmartGit with your own Git repositories or other hosting providers.
-    </p>
-    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by syntevo GmbH.</p>
+    <p>Key Features</p>
+    <ul>
+      <li>Cross-platform support — works on GNU/Linux, macOS, and Windows</li>
+      <li>User-friendly interface — users can adjust the interface to fit their workflow</li>
+      <li>
+        Advanced Git functionality — features an intuitive conflict solver for easy merging; allows
+        users to split, rewrite, reorder, and squash commits for better organization
+      </li>
+      <li>
+        Pricing and licensing — free of charge by open-source developers, employees and students of
+        public academic institutions and employees of public charitables organizations primarily
+        targeting philanthropy, health research, education or social well-being
+      </li>
+    </ul>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by syntevo GmbH.**</p>
   </description>
-  <launchable type="desktop-id">com.syntevo.SmartGit.desktop</launchable>
-  <screenshots>
-    <screenshot type="default">
-      <image>https://www.syntevo.com/assets/images/products/smartgit/opener-73432103.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://www.syntevo.com/assets/images/products/smartgit/why-3-deb1e175.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://www.syntevo.com/assets/images/products/smartgit/why-2-ada71514.png</image>
-    </screenshot>
-  </screenshots>
-  <url type="homepage">https://www.syntevo.com/smartgit/</url>
   <developer_name>syntevo GmbH</developer_name>
-  <update_contact>info@syntevo.com</update_contact>
-  <content_rating type="oars-1.1"/>
+  <id>com.syntevo.SmartGit</id>
+  <launchable type="desktop-id">com.syntevo.SmartGit.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>SmartGit</name>
+  <project_license>LicenseRef-proprietary</project_license>
   <releases>
     <release version="24.1.5" date="2025-09-22">
-      <description></description>
-    </release>
-    <release version="24.1.4" date="2025-07-10">
-      <description/>
-    </release>
-    <release version="24.1.3" date="2025-04-01">
-      <description/>
-    </release>
-    <release version="24.1.2" date="2025-02-14">
-      <description/>
-    </release>
-    <release version="24.1.1" date="2024-12-11">
-      <description/>
-    </release>
-    <release version="24.1.0" date="2024-11-06">
-      <description/>
+      <description />
     </release>
   </releases>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Standard Window</caption>
+      <image>https://www.smartgit.dev/features/standard-window/index.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Three Window Styles</caption>
+      <image>https://www.smartgit.dev/features/three-window-styles/index.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Clean Commits</caption>
+      <image>https://www.smartgit.dev/features/clean-commits/index.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Conflict Resolution</caption>
+      <image>https://www.smartgit.dev/features/conflict-resolution/index.png</image>
+    </screenshot>
+  </screenshots>
+  <summary>The Smart Way to Git</summary>
+  <update_contact>info@syntevo.com</update_contact>
+  <url type="homepage">https://www.smartgit.dev</url>
 </component>

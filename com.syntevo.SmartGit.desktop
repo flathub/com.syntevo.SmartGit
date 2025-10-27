@@ -1,12 +1,13 @@
 [Desktop Entry]
 Categories=Development;RevisionControl;
 Exec=smartgit
-GenericName=Git Client
+GenericName=The Smart Way to Git
 Icon=com.syntevo.SmartGit
 Keywords=git;
 MimeType=x-scheme-handler/git;x-scheme-handler/smartgit;x-scheme-handler/sourcetree;
 Name=SmartGit
-Terminal=false
-Type=Application
 StartupNotify=true
 StartupWMClass=syntevo-smartgit
+Terminal=false
+Type=Application
+Version=1.0

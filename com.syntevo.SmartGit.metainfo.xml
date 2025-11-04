@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <description>
     <p>SmartGit is a powerful, cross-platform Git GUI that works the way you do.</p>
     <p>
@@ -30,8 +30,11 @@
   <name>SmartGit</name>
   <project_license>LicenseRef-proprietary</project_license>
   <releases>
+    <release version="25_1_093" date="2025-10-31">
+      <description></description>
+    </release>
     <release version="24.1.5" date="2025-09-22">
-      <description />
+      <description/>
     </release>
   </releases>
   <screenshots>

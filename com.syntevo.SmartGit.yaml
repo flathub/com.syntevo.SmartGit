@@ -28,9 +28,9 @@ modules:
         url: https://download.smartgit.dev/smartgit/smartgit-linux-24_1_5.tar.gz
         x-checker-data:
           type: html
-          url-template: https://download.smartgit.dev/smartgit/smartgit-linux-${version}.tar.gz
+          url-template: https://download.smartgit.dev/smartgit/smartgit-${version}-linux-amd64.tar.gz
           url: https://www.smartgit.dev/download/
-          version-pattern: smartgit-linux-([\d_]+).tar.gz
+          version-pattern: smartgit-([\d_]+)-linux-amd64.tar.gz
       - type: file
         path: com.syntevo.SmartGit.desktop
       - type: file

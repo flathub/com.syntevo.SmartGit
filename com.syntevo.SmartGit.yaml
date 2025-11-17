@@ -2,8 +2,9 @@ app-id: com.syntevo.SmartGit
 command: smartgit
 finish-args:
   - --device=dri
+  - --env=SMARTGIT_JAVA_HOME=/app/extra/jre
   - --filesystem=home
-  - --filesystem=xdg-run/gnupg
+  - --filesystem=xdg-run/gnupg:ro
   - --filesystem=xdg-run/keyring
   - --share=ipc
   - --share=network
@@ -14,11 +15,11 @@ finish-args:
 modules:
   - name: smartgit
     build-commands:
+      - install -D -m 755 entrypoint.sh /app/bin/smartgit
+      - install -D -m 755 post-install-setup.sh /app/bin/apply_extra
       - install -D -m 644 -t /app/share/applications/ ${FLATPAK_ID}.desktop
       - install -D -m 644 -t /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
       - install -D -m 644 -t /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
-      - install -D -m 755 entrypoint.sh /app/bin/smartgit
-      - install -D -m 755 post-install-setup.sh /app/bin/apply_extra
     buildsystem: simple
     sources:
       - type: extra-data
@@ -41,11 +42,11 @@ modules:
         path: entrypoint.sh
       - type: script
         commands:
-          - bsdtar -x -f smartgit-linux.tar.gz
+          - bsdtar -x -f smartgit-linux.tar.gz --strip-components=2
           - rm smartgit-linux.tar.gz
         dest-filename: post-install-setup.sh
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:

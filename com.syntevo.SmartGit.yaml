@@ -24,9 +24,9 @@ modules:
     sources:
       - type: extra-data
         filename: smartgit-linux.tar.gz
-        sha256: 2579eeccc1c3dc2d98fabd9d894b747e4c497de536cffb303f41eece5c08c51d
-        size: 125309833
-        url: https://download.smartgit.dev/smartgit/smartgit-25_1_093-linux-amd64.tar.gz
+        sha256: c66279d31b3c88e23b8f9081dd14286bd70a31abaf79016a479bde81a720c5bd
+        size: 125308648
+        url: https://download.smartgit.dev/smartgit/smartgit-25_1_100-linux-amd64.tar.gz
         x-checker-data:
           type: html
           url-template: https://download.smartgit.dev/smartgit/smartgit-${version}-linux-amd64.tar.gz
@@ -46,7 +46,7 @@ modules:
           - rm smartgit-linux.tar.gz
         dest-filename: post-install-setup.sh
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:

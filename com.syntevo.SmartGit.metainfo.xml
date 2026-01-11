@@ -2,6 +2,7 @@
 <component type="desktop-application">
   <content_rating type="oars-1.1"/>
   <description>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by syntevo GmbH.**</p>    
     <p>SmartGit is a powerful, cross-platform Git GUI that works the way you do.</p>
     <p>
       SmartGit is particularly known for its user-friendly interface and robust features that cater
@@ -21,7 +22,6 @@
         targeting philanthropy, health research, education or social well-being
       </li>
     </ul>
-    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by syntevo GmbH.**</p>
   </description>
   <developer_name>syntevo GmbH</developer_name>
   <id>com.syntevo.SmartGit</id>

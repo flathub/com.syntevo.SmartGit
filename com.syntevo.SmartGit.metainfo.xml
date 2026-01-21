@@ -30,8 +30,11 @@
   <name>SmartGit</name>
   <project_license>LicenseRef-proprietary</project_license>
   <releases>
-    <release version="25_1_109" date="2026-01-18">
+    <release version="25_1_110" date="2026-01-19">
       <description></description>
+    </release>
+    <release version="25_1_109" date="2026-01-18">
+      <description/>
     </release>
     <release version="25_1_104" date="2026-01-08">
       <description/>

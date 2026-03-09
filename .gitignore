@@ -11,8 +11,8 @@
 
 .settings/
 
-!.vscode/*.json
 .vscode/
+!.vscode/*.json
 
 .zed/
 !.zed/*.json

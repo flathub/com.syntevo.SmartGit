@@ -1,82 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <content_rating type="oars-1.1"/>
-  <description>
-    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by syntevo GmbH.**</p>    
-    <p>SmartGit is a powerful, cross-platform Git GUI that works the way you do.</p>
-    <p>
-      SmartGit is particularly known for its user-friendly interface and robust features that cater
-      to both beginners and experienced users.
-    </p>
-    <p>Key Features</p>
-    <ul>
-      <li>Cross-platform support — works on GNU/Linux, macOS, and Windows</li>
-      <li>User-friendly interface — users can adjust the interface to fit their workflow</li>
-      <li>
-        Advanced Git functionality — features an intuitive conflict solver for easy merging; allows
-        users to split, rewrite, reorder, and squash commits for better organization
-      </li>
-      <li>
-        Pricing and licensing — free of charge by open-source developers, employees and students of
-        public academic institutions and employees of public charitables organizations primarily
-        targeting philanthropy, health research, education or social well-being
-      </li>
-    </ul>
-  </description>
-  <developer_name>syntevo GmbH</developer_name>
-  <id>com.syntevo.SmartGit</id>
-  <launchable type="desktop-id">com.syntevo.SmartGit.desktop</launchable>
-  <metadata_license>CC0-1.0</metadata_license>
-  <name>SmartGit</name>
-  <project_license>LicenseRef-proprietary</project_license>
-  <releases>
-    <release version="25_1_128" date="2026-04-02">
-      <description></description>
-    </release>
-    <release version="25_1_110" date="2026-01-19">
-      <description/>
-    </release>
-    <release version="25_1_109" date="2026-01-18">
-      <description/>
-    </release>
-    <release version="25_1_104" date="2026-01-08">
-      <description/>
-    </release>
-    <release version="25_1_103" date="2025-12-18">
-      <description/>
-    </release>
-    <release version="25_1_102" date="2025-12-11">
-      <description/>
-    </release>
-    <release version="25_1_100" date="2025-11-28">
-      <description/>
-    </release>
-    <release version="25_1_093" date="2025-10-31">
-      <description/>
-    </release>
-    <release version="24.1.5" date="2025-09-22">
-      <description/>
-    </release>
-  </releases>
-  <screenshots>
-    <screenshot type="default">
-      <caption>Standard Window</caption>
-      <image>https://www.smartgit.dev/features/standard-window/index.png</image>
-    </screenshot>
-    <screenshot>
-      <caption>Three Window Styles</caption>
-      <image>https://www.smartgit.dev/features/three-window-styles/index.png</image>
-    </screenshot>
-    <screenshot>
-      <caption>Clean Commits</caption>
-      <image>https://www.smartgit.dev/features/clean-commits/index.png</image>
-    </screenshot>
-    <screenshot>
-      <caption>Conflict Resolution</caption>
-      <image>https://www.smartgit.dev/features/conflict-resolution/index.png</image>
-    </screenshot>
-  </screenshots>
-  <summary>The Smart Way to Git</summary>
-  <update_contact>info@syntevo.com</update_contact>
-  <url type="homepage">https://www.smartgit.dev</url>
+    <id>com.syntevo.SmartGit</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>LicenseRef-proprietary</project_license>
+    <name>SmartGit</name>
+    <summary>The Smart Way to Git</summary>
+    <developer id="com.syntevo">
+        <name>syntevo GmbH</name>
+    </developer>
+    <update_contact>info@syntevo.com</update_contact>
+    <url type="homepage">https://www.smartgit.dev</url>
+    <url type="help">https://docs.syntevo.com/SmartGit/Latest/Manual/</url>
+    <launchable type="desktop-id">com.syntevo.SmartGit.desktop</launchable>
+    <content_rating type="oars-1.1"/>
+    <description>
+        <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by syntevo GmbH.**</p>
+        <p>SmartGit is a powerful, cross-platform Git GUI that works the way you do.</p>
+        <p>
+            SmartGit is particularly known for its user-friendly interface and robust features that cater
+            to both beginners and experienced users.
+        </p>
+        <p>Key Features</p>
+        <ul>
+            <li>Cross-platform support — works on GNU/Linux, macOS, and Windows</li>
+            <li>User-friendly interface — users can adjust the interface to fit their workflow</li>
+            <li>
+                Advanced Git functionality — features an intuitive conflict solver for easy merging; allows
+                users to split, rewrite, reorder, and squash commits for better organization
+            </li>
+            <li>
+                Pricing and licensing — free of charge by open-source developers, employees and students of
+                public academic institutions and employees of public charitables organizations primarily
+                targeting philanthropy, health research, education or social well-being
+            </li>
+        </ul>
+    </description>
+    <screenshots>
+        <screenshot type="default">
+            <caption>Standard Window</caption>
+            <image>https://www.smartgit.dev/features/standard-window/index.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Three Window Styles</caption>
+            <image>https://www.smartgit.dev/features/three-window-styles/index.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Clean Commits</caption>
+            <image>https://www.smartgit.dev/features/clean-commits/index.png</image>
+        </screenshot>
+        <screenshot>
+            <caption>Conflict Resolution</caption>
+            <image>https://www.smartgit.dev/features/conflict-resolution/index.png</image>
+        </screenshot>
+    </screenshots>
+    <releases>
+        <release version="25_1_128" date="2026-04-02">
+            <url>https://www.smartgit.dev/whats-new/</url>
+        </release>
+        <release version="25_1_110" date="2026-01-19"/>
+        <release version="25_1_109" date="2026-01-18"/>
+        <release version="25_1_104" date="2026-01-08"/>
+        <release version="25_1_103" date="2025-12-18"/>
+        <release version="25_1_102" date="2025-12-11"/>
+        <release version="25_1_100" date="2025-11-28"/>
+        <release version="25_1_093" date="2025-10-31"/>
+        <release version="24.1.5" date="2025-09-22"/>
+    </releases>
 </component>

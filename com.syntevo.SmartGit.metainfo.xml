@@ -54,6 +54,9 @@
         </screenshot>
     </screenshots>
     <releases>
+        <release version="26_1_036" date="2026-05-18">
+            <description></description>
+        </release>
         <release version="25_1_128" date="2026-04-02">
             <url>https://www.smartgit.dev/whats-new/</url>
         </release>

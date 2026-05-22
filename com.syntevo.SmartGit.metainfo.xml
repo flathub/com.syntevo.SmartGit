@@ -55,14 +55,10 @@
     </screenshots>
     <releases>
         <release version="26_1_037" date="2026-05-21">
-            <description></description>
-        </release>
-        <release version="26_1_036" date="2026-05-18">
-            <description/>
-        </release>
-        <release version="25_1_128" date="2026-04-02">
             <url>https://www.smartgit.dev/whats-new/</url>
         </release>
+        <release version="26_1_036" date="2026-05-18"/>
+        <release version="25_1_128" date="2026-04-02"/>
         <release version="25_1_110" date="2026-01-19"/>
         <release version="25_1_109" date="2026-01-18"/>
         <release version="25_1_104" date="2026-01-08"/>

@@ -18,6 +18,7 @@ finish-args:
   - --socket=ssh-auth
   - --socket=x11
   - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.freedesktop.FileManager1
 modules:
   - name: smartgit
     build-commands:

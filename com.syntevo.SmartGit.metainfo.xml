@@ -2,19 +2,31 @@
 <component type="desktop-application">
     <id>com.syntevo.SmartGit</id>
     <metadata_license>CC0-1.0</metadata_license>
-    <project_license>LicenseRef-proprietary</project_license>
+    <project_license>LicenseRef-proprietary=https://www.smartgit.dev/documents/smartgit-license</project_license>
     <name>SmartGit</name>
-    <summary>The Smart Way to Git</summary>
+    <summary>Use Git the Smart Way</summary>
     <developer id="com.syntevo">
         <name>syntevo GmbH</name>
     </developer>
     <update_contact>info@syntevo.com</update_contact>
     <url type="homepage">https://www.smartgit.dev</url>
     <url type="help">https://docs.syntevo.com/SmartGit/Latest/Manual/</url>
+    <url type="contact">https://www.smartgit.dev/contact</url>
     <launchable type="desktop-id">com.syntevo.SmartGit.desktop</launchable>
     <content_rating type="oars-1.1"/>
+    <branding>
+        <color type="primary" scheme_preference="light">#ef673e</color>
+        <color type="primary" scheme_preference="dark">#60247e</color>
+    </branding>
+    <requires>
+        <control>keyboard</control>
+        <control>pointing</control>
+        <display_length compare="ge">768</display_length>
+    </requires>
+    <recommends>
+        <internet>always</internet>
+    </recommends>
     <description>
-        <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by syntevo GmbH.**</p>
         <p>SmartGit is a powerful, cross-platform Git GUI that works the way you do.</p>
         <p>
             SmartGit is particularly known for its user-friendly interface and robust features that cater
@@ -29,28 +41,40 @@
                 users to split, rewrite, reorder, and squash commits for better organization
             </li>
             <li>
-                Pricing and licensing — free of charge by open-source developers, employees and students of
-                public academic institutions and employees of public charitables organizations primarily
+                Pricing and licensing — free of charge for open-source developers, employees and students of
+                public academic institutions and employees of public charitables organizations, primarily
                 targeting philanthropy, health research, education or social well-being
             </li>
         </ul>
     </description>
     <screenshots>
-        <screenshot type="default">
+        <screenshot type="default" environment="gnome">
             <caption>Standard Window</caption>
-            <image>https://www.smartgit.dev/features/standard-window/index.png</image>
+            <image>https://www.smartgit.dev/flathub/standard_window.png</image>
         </screenshot>
-        <screenshot>
+        <screenshot environment="gnome">
             <caption>Three Window Styles</caption>
-            <image>https://www.smartgit.dev/features/three-window-styles/index.png</image>
+            <image>https://www.smartgit.dev/images/flathub_discover.png</image>
         </screenshot>
-        <screenshot>
+        <screenshot environment="gnome">
+            <caption>Log Window</caption>
+            <image>https://www.smartgit.dev/images/flathub_log_window.png</image>
+        </screenshot>
+        <screenshot environment="gnome">
+            <caption>Working Tree Window</caption>
+            <image>https://www.smartgit.dev/images/flathub_working_tree_window.png</image>
+        </screenshot>
+        <screenshot type="default" environment="gnome:dark">
+            <caption>Dark Mode</caption>
+            <image>https://www.smartgit.dev/images/flathub_dark_mode.png</image>
+        </screenshot>
+        <screenshot environment="gnome">
             <caption>Clean Commits</caption>
-            <image>https://www.smartgit.dev/features/clean-commits/index.png</image>
+            <image>https://www.smartgit.dev/images/flathub_modify_history.png</image>
         </screenshot>
-        <screenshot>
+        <screenshot environment="gnome">
             <caption>Conflict Resolution</caption>
-            <image>https://www.smartgit.dev/features/conflict-resolution/index.png</image>
+            <image>https://www.smartgit.dev/images/flathub_conflict_solver.png</image>
         </screenshot>
     </screenshots>
     <releases>

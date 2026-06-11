@@ -50,11 +50,11 @@
     <screenshots>
         <screenshot type="default" environment="gnome">
             <caption>Standard Window</caption>
-            <image>https://www.smartgit.dev/flathub/standard_window.png</image>
+            <image>https://www.smartgit.dev/images/flathub_standard_window.png</image>
         </screenshot>
-        <screenshot environment="gnome">
-            <caption>Three Window Styles</caption>
-            <image>https://www.smartgit.dev/images/flathub_discover.png</image>
+        <screenshot type="default" environment="gnome:dark">
+            <caption>Dark Mode</caption>
+            <image>https://www.smartgit.dev/images/flathub_dark_mode.png</image>
         </screenshot>
         <screenshot environment="gnome">
             <caption>Log Window</caption>
@@ -63,10 +63,6 @@
         <screenshot environment="gnome">
             <caption>Working Tree Window</caption>
             <image>https://www.smartgit.dev/images/flathub_working_tree_window.png</image>
-        </screenshot>
-        <screenshot type="default" environment="gnome:dark">
-            <caption>Dark Mode</caption>
-            <image>https://www.smartgit.dev/images/flathub_dark_mode.png</image>
         </screenshot>
         <screenshot environment="gnome">
             <caption>Clean Commits</caption>

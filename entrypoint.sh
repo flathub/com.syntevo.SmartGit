@@ -9,6 +9,16 @@ sync_user_git_config () {
   fi
 }
 
+# --------------------------------------------------------------------------------------------------
+#
+# --------------------------------------------------------------------------------------------------
+
 sync_user_git_config
 
-exec env "/app/extra/bin/smartgit.sh" "$@"
+if [[ "${SMARTGIT_DEBUG_ENABLED:-}" == "true" ]]; then
+  printf "TMPDIR: %s\n" "${TMPDIR:-}"
+  printf "XDG_CURRENT_DESKTOP: %s\n" "${XDG_CURRENT_DESKTOP:-}"
+  printf "XDG_SESSION_TYPE: %s\n" "${XDG_SESSION_TYPE:-}"
+fi
+
+exec env "/app/bin/smartgit.sh" "$@"

@@ -1,6 +1,6 @@
 app-id: com.syntevo.SmartGit
 runtime: org.freedesktop.Platform
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 command: smartgit
 separate-locales: false
@@ -8,48 +8,40 @@ tags:
   - proprietary
 finish-args:
   - --device=dri
-  - --env=SMARTGIT_JAVA_HOME=/app/extra/jre
+  - --env=SMARTGIT_JAVA_HOME=/app/jre
   - --filesystem=home
   - --filesystem=xdg-run/gnupg:ro
   - --filesystem=xdg-run/keyring
   - --share=ipc
   - --share=network
+  - --socket=fallback-x11
   - --socket=gpg-agent
   - --socket=ssh-auth
   - --socket=wayland
-  - --socket=fallback-x11
-  - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.FileManager1
+  - --talk-name=org.freedesktop.secrets
 modules:
   - name: smartgit
     build-commands:
-      - install -Dm644 ${FLATPAK_ID}.desktop -t /app/share/applications/
-      - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/
-      - install -Dm644 ${FLATPAK_ID}.svg -t /app/share/icons/hicolor/scalable/apps/
-      - install -Dm755 post-install-setup.sh /app/bin/apply_extra
+      - bsdtar -C /app -f smartgit-linux.tar.gz -x -z --strip-components=2
+      - install -Dm644 /app/bin/smartgit.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -Dm644 -t /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
+      - install -Dm644 -t /app/share/applications/ ${FLATPAK_ID}.desktop
       - install -Dm755 entrypoint.sh /app/bin/smartgit
     buildsystem: simple
     sources:
-      - type: extra-data
-        filename: smartgit-linux.tar.gz
+      - type: file
+        path: com.syntevo.SmartGit.desktop
+      - type: file
+        path: com.syntevo.SmartGit.metainfo.xml
+      - type: file
+        path: entrypoint.sh
+      - type: file
+        dest-filename: smartgit-linux.tar.gz
         sha256: 4620b1f0450f4fee9a854bc5720905da9d0ea7c013babf29e92edcd9dd6cd8ae
-        size: 124228165
         url: https://download.smartgit.dev/smartgit/smartgit-26_1_038-linux-amd64.tar.gz
         x-checker-data:
           type: html
           url-template: https://download.smartgit.dev/smartgit/smartgit-${version}-linux-amd64.tar.gz
           url: https://www.smartgit.dev/download/
           version-pattern: smartgit-([\d_]+)-linux-amd64.tar.gz
-      - type: file
-        path: com.syntevo.SmartGit.desktop
-      - type: file
-        path: com.syntevo.SmartGit.metainfo.xml
-      - type: file
-        path: com.syntevo.SmartGit.svg
-      - type: file
-        path: entrypoint.sh
-      - type: script
-        commands:
-          - bsdtar -x -f smartgit-linux.tar.gz --strip-components=2
-          - rm smartgit-linux.tar.gz
-        dest-filename: post-install-setup.sh

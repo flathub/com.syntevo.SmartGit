@@ -32,9 +32,9 @@ modules:
     sources:
       - type: extra-data
         filename: smartgit-linux.tar.gz
-        sha256: 4620b1f0450f4fee9a854bc5720905da9d0ea7c013babf29e92edcd9dd6cd8ae
-        size: 124228165
-        url: https://download.smartgit.dev/smartgit/smartgit-26_1_038-linux-amd64.tar.gz
+        sha256: 1c1c8cca8623cb336a951f2084b4681608591515d186bab7ee3f503d55e7c273
+        size: 124192127
+        url: https://download.smartgit.dev/smartgit/smartgit-26_1_052-linux-amd64.tar.gz
         x-checker-data:
           type: html
           url-template: https://download.smartgit.dev/smartgit/smartgit-${version}-linux-amd64.tar.gz

@@ -1,6 +1,6 @@
 app-id: com.syntevo.SmartGit
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 command: smartgit
 separate-locales: false
@@ -38,8 +38,8 @@ modules:
         path: entrypoint.sh
       - type: file
         dest-filename: smartgit-linux.tar.gz
-        sha256: e7dac7b3febb1a89adee53808352110f0bd8b87dc80dd1105b9ae192ec7724a3
-        url: https://download.smartgit.dev/smartgit/smartgit-26_1_052-linux-amd64.tar.gz
+        sha256: 21d42266674fd1c785042b8435bf64acae983a0e42e74d599229b05935f4041a
+        url: https://download.smartgit.dev/smartgit/smartgit-26_1_055-linux-amd64.tar.gz
         x-checker-data:
           type: html
           url-template: https://download.smartgit.dev/smartgit/smartgit-${version}-linux-amd64.tar.gz

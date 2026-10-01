@@ -10,16 +10,14 @@ finish-args:
   - --device=dri
   - --env=SMARTGIT_JAVA_HOME=/app/jre
   - --filesystem=home
-  - --filesystem=xdg-run/gnupg:ro
-  - --filesystem=xdg-run/keyring
   - --share=ipc
   - --share=network
+  - --socket=fallback-x11
   - --socket=gpg-agent
   - --socket=ssh-auth
   - --socket=wayland
-  - --socket=fallback-x11
-  - --talk-name=org.freedesktop.secrets
   - --talk-name=org.freedesktop.FileManager1
+  - --talk-name=org.freedesktop.secrets
 modules:
   - name: smartgit
     build-commands:

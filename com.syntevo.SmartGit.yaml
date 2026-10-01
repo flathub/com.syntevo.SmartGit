@@ -38,8 +38,8 @@ modules:
         path: entrypoint.sh
       - type: file
         dest-filename: smartgit-linux.tar.gz
-        sha256: 21d42266674fd1c785042b8435bf64acae983a0e42e74d599229b05935f4041a
-        url: https://download.smartgit.dev/smartgit/smartgit-26_1_055-linux-amd64.tar.gz
+        sha256: 061d9c2759a9d80763b5e7b734f9292e409c3cd2a357cf64fe05f57a7e1b52b6
+        url: https://download.smartgit.dev/smartgit/smartgit-26_1_056-linux-amd64.tar.gz
         x-checker-data:
           type: html
           url-template: https://download.smartgit.dev/smartgit/smartgit-${version}-linux-amd64.tar.gz
